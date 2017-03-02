@@ -1,0 +1,12 @@
+/*为了修改网站标题的大小,并且去掉超链接的下划线*/
+.navbar-brand-1 {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 60px;
+    font-family: 华文楷体;
+    line-height: 20px;
+}
+.menu-1{
+    font-family: 楷体;
+}

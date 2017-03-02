@@ -1,0 +1,66 @@
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1486617124</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[张晓雯]]></Content>
+<MsgId>6384971929679773076</MsgId>
+</xml>
+
+
+
+05:26:57 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1486618017</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.489944</Latitude>
+<Longitude>120.362648</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+05:26:57 T 
+
+05:27:05 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1486618024</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[框架]]></Content>
+<MsgId>6384975795150339775</MsgId>
+</xml>
+05:27:05 T 
+
+05:36:55 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1486618615</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.490089</Latitude>
+<Longitude>120.362450</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+05:36:55 T 
+
+05:41:39 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1486618899</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.490089</Latitude>
+<Longitude>120.362450</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+05:41:39 T 
+
+05:42:11 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1486618931</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[宿舍]]></Content>
+<MsgId>6384979690685677575</MsgId>
+</xml>
+05:42:11 T 
+
