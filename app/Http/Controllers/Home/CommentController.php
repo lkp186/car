@@ -30,15 +30,18 @@ class CommentController extends Controller
         $user_id=$request->session()->get('user_id');
         $content=$request->input('content');
         $order_number=$request->input('order_number');
-        Order_info::where('order_number',$order_number)->update(['order_comment_status'=>1]);
-        $comment=new Comment_info;
-        $comment->order_number=$order_number;
-        $comment->comment_content=$content;
-        $comment->comment_name=$request->session()->get('username');
-        date_default_timezone_set('PRC');
-        $comment->comment_name=time();
-        $comment->user_id=$user_id;
-        $comment->save();
+        $comment_name=Comment_info::where('order_number',$order_number)->value('comment_name');
+        if(empty($comment_name)){
+            Order_info::where('order_number',$order_number)->update(['order_comment_status'=>1]);
+            $comment=new Comment_info;
+            $comment->order_number=$order_number;
+            $comment->comment_content=$content;
+            $comment->comment_name=$request->session()->get('username');
+            date_default_timezone_set('PRC');
+            $comment->comment_time=time();
+            $comment->user_id=$user_id;
+            $comment->save();
+        }
         $ID=User_info::where('user_id',$user_id)->value('user_ID_card'); //获取身份证编号
         $result=Order_info::where('order_name_ID',$ID)->get();
         return view('home.comment',['result'=>$result]);
