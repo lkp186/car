@@ -3,7 +3,6 @@
     <title>查询结果</title>
 @endsection
 @section('content')
-
         @if(count($record)!=0)
             <div>
                 <div style="padding-top: 20px;">
