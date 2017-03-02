@@ -1,6 +1,6 @@
 @extends('layouts.personal')
 @section('title')
-    <title>用户反馈</title>
+    <title>用户评价</title>
 @endsection
 @section('li')
     <ul class="nav nav-pills nav-stacked" role="tablist" style="font-family: 华文宋体;text-align: center;margin-left: -5px;" >
@@ -13,9 +13,9 @@
     </ul>
 @endsection
 @section('main')
-    <div style="padding-top: 20px;">
+    <div style="padding-top: 40px;">
         <div style="display: none;">{{date_default_timezone_set('Asia/Shanghai')}}</div>
-        @foreach($result as $value)
+        @foreach($comment as $value)
             <div style="background-color: white;">
                 <table class="table" style="font-size: 1.5em;">
                     <tr class="active">
@@ -35,19 +35,26 @@
                         <td  style="vertical-align: middle;text-align: center"><label class="label label-success">{{$value->car_number}}</label></td>
                         <td style="width: 300px;vertical-align: middle;text-align: center"><img src="{{asset('public/image/yuan.png')}}">&nbsp;{{$value->order_money}}</td>
                         <td style="width: 400px;vertical-align: middle;text-align: left"><img src="{{asset('public/image/local.png')}}">&nbsp;&nbsp;{{$value->car_location}}</td>
-                        @if($value->order_comment_status!=1)
-                            <td style="vertical-align: middle;text-align: center">
-                                <a  href="{{url('home/comment?order_number='.$value->order_number)}}" class="btn btn-primary" role="button">评论</a>
-                            </td>
-                        @else
-                            <td style="vertical-align: middle;text-align: center"><button class="btn btn-success">已评价</button></td>
-                        @endif
                     </tr>
                 </table>
             </div>
             <div style="background-color: white;"></div>
         @endforeach
+        <form role="form" style="padding-top: 20px;" method="post" action="{{url('home/commentOpt')}}">
+            <div class="row">
+                <div class="col-md-12">
+                    {{csrf_field()}}
+                    <input type="hidden" name="order_number" value="{{$order_number}}">
+                    <textarea name="content" class="form-control " rows="6"></textarea>
+                </div>
+                <div class="col-md-1 col-md-offset-11" style="padding-top: 10px;">
+                    <button class="btn btn-warning btn-block">评论</button>
+                </div>
+            </div>
+
+        </form>
     </div>
+
 @endsection
 @section('script')
     <script  src="{{asset('public/js/jqthumb.min.js')}}"></script>

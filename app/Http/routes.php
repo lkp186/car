@@ -93,7 +93,9 @@ Route::group(['middleware' => ['web','home'],'prefix'=>'home','namespace'=>'Home
     Route::get('user/rules','PersonalController@rules');
 
     //使用反馈
-    Route::get('user/comment','CommentController@commentView');
+    Route::get('user/comment','CommentController@commentView');//个人反馈界面
+    Route::get('comment','CommentController@comment');//用户进行评论的界面
+    Route::post('commentOpt','CommentController@commentOpt');//用户评论行为的处理
 
 });
 
