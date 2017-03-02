@@ -54,7 +54,7 @@
                                     <td  style="vertical-align: middle;text-align: center"><label class="label label-primary">{{$value->car_number}}</label></td>
                                     <td style="width: 300px;vertical-align: middle;text-align: center"><img src="{{asset('public/image/yuan.png')}}">&nbsp;{{$value->order_money}}</td>
                                     <td style="width: 400px;vertical-align: middle;text-align: left"><img src="{{asset('public/image/local.png')}}">&nbsp;&nbsp;{{$value->car_location}}</td>
-                                    <td style="vertical-align: middle;text-align: center"><button class="btn btn-default">评论</button></td>
+                                    <td style="vertical-align: middle;text-align: center"><button class="btn btn-primary">评论</button></td>
                                 </tr>
                             </table>
                         </div>
