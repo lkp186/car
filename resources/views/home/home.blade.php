@@ -188,7 +188,7 @@
                                     <input type="hidden" value="{{$value->comment_name}}">
                                     <input type="hidden" value="{{date('Y-m-d H:i:s',$value->comment_time)}}">
                                     <input type="hidden" value="{{$value->comment_content}}">
-                                    <li style="font-size: 18px;font-family: 微软雅黑">昵称：{{$value->comment_name}}于{{date('Y-m-d H:i:s',$value->comment_time)}}发表了评论</li>
+                                    <li class="lkp"style="font-size: 18px;font-family: 微软雅黑">昵称：{{$value->comment_name}}于{{date('Y-m-d H:i:s',$value->comment_time)}}发表了评论</li>
                                 @endforeach
                             </ul>
                         </div>
@@ -351,7 +351,7 @@
         });
     </script>
     <script>
-        $('li').click(function () {
+        $('.lkp').click(function () {
             var comment_name=$(this).prev().prev().prev().val();
             var comment_time=$(this).prev().prev().val();
             var comment_content=$(this).prev().val();
