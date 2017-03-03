@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{asset('public/css/home.css')}}">
     <script type="text/javascript" src="{{asset('public/js/html5.js')}}"></script>
     <script type="text/javascript" src="{{asset('public/js/jquery.js')}}"></script>
+    <script src="{{asset('public/js/sweet-alert.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('public/css/sweet-alert.css')}}">
 </head>
 <body>
 
@@ -151,16 +153,16 @@
                     },
                     success:function (data) {
                         if(data==0){
-                            alert('用户名或密码不正确');
+                            sweetAlert("用户名或密码不正确!", "", "error");
                         }else {
-                            alert('登录成功');
+                            sweetAlert("登录成功！", "", "success");
                             window.location.href=('{{asset('admin/home')}}');
                         }
                     }
                 });
             }else {
                 $('#login').attr('type','button');
-                alert('请确认后再提交');
+                sweetAlert("请确认内容后提交!", "", "error");
             }
         });
     });

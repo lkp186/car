@@ -109,10 +109,11 @@
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-5">
-                        <div class="jumbotron">
+                        <div class="jumbotron"style="text-indent: 1em;">
                             在周一至周六的7：00~18:00致电客服，随时为您解决问题！
                         </div>
-                    </div>            <div class="col-xs-6 col-md-1">
+                    </div>
+                    <div class="col-xs-6 col-md-1">
                         <div class="thumbnail" style="margin-top: 50px;">
                             <img  src="{{asset('public/image/heart.png')}}" alt="...">
                         </div>
@@ -142,17 +143,15 @@
                     <div class="panel panel-danger" style="margin-top: -122px;">
                         <div class="panel-heading">不一样的体验，不一样的生活</div>
                         <div class="panel-body">
-
-                                <div class="row">
-                                    <form role="form" action="{{url('home/search/searchOrder')}}" method="post">
-                                        {{csrf_field()}}
-                                        <div class="col-md-8">
-                                            <input id="ID" name="ID" class="form-control" placeholder="身份证号">
-                                        </div>
-                                        <button type="button" id="hentai"   class="btn btn-sm btn-primary">查找订单</button>
-                                    </form>
-                                </div>
-
+                            <div class="row">
+                                <form role="form" action="{{url('home/search/searchOrder')}}" method="post">
+                                    {{csrf_field()}}
+                                    <div class="col-md-8">
+                                        <input id="ID" name="ID" class="form-control" placeholder="身份证号">
+                                    </div>
+                                    <button type="button" id="hentai"   class="btn btn-sm btn-primary">查找订单</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,8 +162,8 @@
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-5">
-                        <div class="jumbotron">
-                            <h4>Hello, world!</h4>
+                        <div class="jumbotron" style="text-indent: 1em;">
+                            多种支付手段，多元化的服务，多种层次的选择！
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-1">
@@ -173,18 +172,23 @@
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-5">
-                        <div class="jumbotron">
-                            <h4>Hello, world!</h4>
+                        <div class="jumbotron" style="text-indent: 1em;">
+                            订单完成之后即可进行评价，我们会十分高兴地接纳您的建议！
                         </div>
                     </div>
                 </div>
+
                 <div class="col-sm-12 col-md-3" >
                     <div class="panel panel-warning" style="margin-top:-280px;">
                         <div class="panel-heading">用户评价</div>
+                        <input type="hidden" value="{{date_default_timezone_set('Asia/Shanghai')}}">
                         <div class="panel-body comment"  >
                             <ul style="text-indent:0.5em;">
                                 @foreach($comment as $value)
-                                    <li>{{$value->comment_content}}</li>
+                                    <input type="hidden" value="{{$value->comment_name}}">
+                                    <input type="hidden" value="{{date('Y-m-d H:i:s',$value->comment_time)}}">
+                                    <input type="hidden" value="{{$value->comment_content}}">
+                                    <li style="font-size: 18px;font-family: 微软雅黑">昵称：{{$value->comment_name}}于{{date('Y-m-d H:i:s',$value->comment_time)}}发表了评论</li>
                                 @endforeach
                             </ul>
                         </div>
@@ -262,6 +266,7 @@
             </ul>
         </div>
     </div>
+
 @endsection
 
 @section('foot')
@@ -338,10 +343,24 @@
         $(function(){
             $('.home').jqthumb({
                 width: $(window).width(),
-                height: 500,
+                height: 490,
                 after: function(imgObj){
                     imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
                 }
+            });
+        });
+    </script>
+    <script>
+        $('li').click(function () {
+            var comment_name=$(this).prev().prev().prev().val();
+            var comment_time=$(this).prev().prev().val();
+            var comment_content=$(this).prev().val();
+            zeroModal.show({
+                title: '<h2 align="center"><label class="label label-warning">评论详情</label></h2>',
+                content:'<div style="background-color: #f7ecb5;font-size: 20px;height: 120px;text-indent: 2em;">'+comment_content+'</div>'
+                +'<div style="font-size: 1.3em;text-align: right;">'+'昵称：'+comment_name+'&nbsp;&nbsp;&nbsp;'+'日期：'+comment_time+'</div>',
+                transition:true,
+                opacity: 1,
             });
         });
     </script>
