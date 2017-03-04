@@ -182,7 +182,7 @@ $item_str
                 'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
             $result=$this->transMusic($obj,$content);
         }elseif (strstr($keyword,'天气')){
-            $url="http://b8107.cn/weather?city=".substr($keyword,2);
+            $url="http://b8107.cn/weather?city=".substr($keyword,1);
             $json=$this->http_request($url);
             $attr=json_decode($json,true);
             if(empty($attr)){
@@ -192,7 +192,7 @@ $item_str
                 if($attr['status']==0){
                     $content="结果正常";$result=$this->transText($obj,$content);
                 }else{
-                    $content="发生了位置的错误";
+                    $content=$keyword."发生了位置的错误";
                     $result=$this->transText($obj,$content);
                 }
             }
