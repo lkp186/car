@@ -149,6 +149,7 @@ Route::group(['middleware' => ['web','admin'],'prefix'=>'admin','namespace'=>'Ad
 //微信公众号部分的路由
 Route::group(['middleware'=>'web','namespace'=>'WeChat'],function (){
     Route::get('custom/service','CustomServiceController@index');//客服接口
+    Route::get('weather','WeatherController@index');//查询天气
 });
 
 

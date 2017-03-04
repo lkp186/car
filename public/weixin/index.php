@@ -181,8 +181,24 @@ $item_str
                 'MusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
                 'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
             $result=$this->transMusic($obj,$content);
-        }else{
-            $content="共享汽车出品 技术总监 刘康平";
+        }elseif (substr($keyword,0,2)=='天气'){
+            $url="http://b8107.cn/weather?city=".substr($keyword,2);
+            $json=$this->http_request($url);
+            $attr=json_decode($json,true);
+            if(empty($attr)){
+                $content="没有结果啊";
+                $result=$this->transText($obj,$content);
+            }else{
+                if($attr['status']==0){
+                    $content="结果正常";$result=$this->transText($obj,$content);
+                }else{
+                    $content="发生了位置的错误";
+                    $result=$this->transText($obj,$content);
+                }
+            }
+        }
+        else{
+            $content="共享汽车-技术总监 刘康平 编写";
         }
 
         if(is_array($content)){
