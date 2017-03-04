@@ -89,6 +89,11 @@ $json_menu='
                "type":"click",
                "name":"当前天气",
                "key":"V1001_GOOD"
+           },
+           {
+               "type":"click",
+               "name":"联系客服",
+               "key":"custom_service"
            }
            ]
      }

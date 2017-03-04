@@ -145,3 +145,10 @@ Route::group(['middleware' => ['web','admin'],'prefix'=>'admin','namespace'=>'Ad
     Route::get('home/comment','AdminUserManageController@comment');//用户评论管理
     Route::get('home/comment/delete','AdminUserManageController@delComment');//用户评论删除操作
 });
+
+//微信公众号部分的路由
+Route::group(['middleware'=>'web','namespace'=>'WeChat'],function (){
+    Route::get('custom/service','CustomServiceController@index');//客服接口
+});
+
+

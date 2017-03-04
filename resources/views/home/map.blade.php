@@ -5,9 +5,7 @@
         //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
         //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
     </script>
-
 @endsection
-
 @section('content')
     <div id="allmap" style="position:fixed;;width:1900px; height:880px;margin-top: -20px;"></div>
     <script type="text/javascript">
