@@ -181,7 +181,7 @@ $item_str
                 'MusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
                 'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
             $result=$this->transMusic($obj,$content);
-        }elseif (substr($keyword,0,2)=='天气'){
+        }elseif (strstr($keyword,'天气')){
             $url="http://b8107.cn/weather?city=".substr($keyword,2);
             $json=$this->http_request($url);
             $attr=json_decode($json,true);
