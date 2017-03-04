@@ -76,9 +76,9 @@ $json_menu='
            "name":"便民服务",
            "sub_button":[
            {
-               "type":"view",
+               "type":"click",
                "name":"交通查询",
-               "url":"http://www.soso.com/"
+               "key":"traffic"
            },
            {
                "type":"view",
