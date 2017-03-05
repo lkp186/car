@@ -190,14 +190,14 @@ $item_str
                 $result=$this->transText($obj,$content);
             }else{
                 $weather=$attr['results'];
-                $weatherArray[] = array("Title" =>$weather['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
-                for ($i = 0; $i < count($weather["daily"]); $i++) {
+                $weatherArray[] = array("Title" =>$weather[0]['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
+                for ($i = 0; $i < count($weather["daily"]-1); $i++) {
                     $weatherArray[] = array("Title"=>$weather['daily']['date']."\n",
                         "Description"=>"",
                         "PicUrl"=>"",
                         "Url" =>"");
                 }
-                $content=$attr['results']['location']['name'];$result=$this->transText($obj,$content);
+                $content=$attr['results'][0]['location']['name'];$result=$this->transText($obj,$content);
             }
         }
         else{
