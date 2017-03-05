@@ -192,7 +192,7 @@ $item_str
                 if($attr['status']==0){
                     $content="结果正常";$result=$this->transText($obj,$content);
                 }else{
-                    $content="发生了位置的错误".substr($keyword,2);
+                    $content="发生了位置的错误".mb_substr($keyword,2,'',"utf-8");
                     $result=$this->transText($obj,$content);
                 }
             }
