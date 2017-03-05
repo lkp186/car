@@ -191,9 +191,9 @@ $item_str
             }else{
                 $weather=$attr['results'][0];
                 $weatherArray[] = array("Title" =>$weather['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
-                for ($i = 0; $i < count($weather["daily"])-1; $i++) {
-                    $weatherArray[] = array("Title"=>$weather['daily']['date']."\n",
-                        "Description"=>"",
+                for ($i = 0; $i < count($weather["daily"]); $i++) {
+                    $weatherArray[] = array("Title"=>$weather['daily'][$i]['date']."\n",
+                        "Description"=>$weather['daily'][$i]['text_day'],
                         "PicUrl"=>"",
                         "Url" =>"");
                 }
