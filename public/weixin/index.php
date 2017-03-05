@@ -182,10 +182,7 @@ $item_str
                 'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
             $result=$this->transMusic($obj,$content);
         }elseif (strstr($keyword,'天气')){
-            $city=trim(mb_substr($keyword,2,10,"utf-8"));
-            $url = "https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=$city&language=zh-Hans&unit=c&start=0&days=3";
-
-//            $url="http://b8107.cn/weather?city=".mb_substr($keyword,2,10,"utf-8");
+            $url="http://b8107.cn/weather?city=".mb_substr($keyword,2,10,"utf-8");
             $json=$this->http_request($url);
             $attr=json_decode($json,true);
             if(empty($attr)){
