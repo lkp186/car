@@ -12,9 +12,7 @@ class WeatherController extends Controller
     //向天气api发送请求
     public function index(Request $request){
         $city=$request->input('city');
-        $url = "http://api.map.baidu.com/telematics/v3/weather?location="
-            .urlencode($city)
-            ."&output=json&ak=fdSzO7ivDE0MfeukkwrByrh5Pi0LXihU";
+        $url = "https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=$city&language=zh-Hans&unit=c&start=0&days=5";
         $json=$this->http_request($url);
         return $json;
     }
