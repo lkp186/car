@@ -197,7 +197,7 @@ $item_str
                         "PicUrl"=>"",
                         "Url" =>"");
                 }
-                $content=$weatherArray;$result=$this->transText($obj,$weather['location']['name']);
+                $content=$weather['location']['name'];$result=$this->transText($obj,$content);
             }
         }
         else{
