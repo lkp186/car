@@ -190,7 +190,19 @@ $item_str
                 $result=$this->transText($obj,$content);
             }else{
                 if($attr['error']==0){
-                    $content="结果正常";$result=$this->transText($obj,$content);
+                    $weather=$attr['result'][0];
+                    $curHour = (int)date('H',time());
+                    $weatherArray[] = array("Title" =>$weather['currentCity']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
+                    for ($i = 0; $i < count($weather["weather_data"]); $i++) {
+                        $weatherArray[] = array("Title"=>
+                            $weather["weather_data"][$i]["date"]."\n".
+                            $weather["weather_data"][$i]["weather"]." ".
+                            $weather["weather_data"][$i]["wind"]." ".
+                            $weather["weather_data"][$i]["temperature"],
+                            "Description"=>"",
+                            "PicUrl"=>(($curHour >= 6) && ($curHour < 18))?$weather["weather_data"][$i]["dayPictureUrl"]:$weather["weather_data"][$i]["nightPictureUrl"], "Url"=>"");
+                    }
+                    $content=$weatherArray;$result=$this->transNews($obj,$content);
                 }else{
                     $content="发生了位置的错误".mb_substr($keyword,2,10,"utf-8");
                     $result=$this->transText($obj,$content);
