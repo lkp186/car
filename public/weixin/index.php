@@ -196,7 +196,7 @@ $item_str
 //                        "PicUrl"=>"",
 //                        "Url" =>"");
 //                }
-                $content='就等着天气数组了';$result=$this->transText($obj,$content);
+                $content=$attr['results'][0]['location']['timezone_offset'];$result=$this->transText($obj,$content);
             }
         }
         else{
