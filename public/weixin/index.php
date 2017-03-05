@@ -67,8 +67,8 @@ class wechatCallbackapiTest
                 switch ($obj->EventKey){
                     case 'music':
                         $content=array("Title"=>'FSN','Description'=>'超燃',
-                        'MusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
-                        'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
+                            'MusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
+                            'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
                         $result=$this->transMusic($obj,$content);
                         break;
                     case 'traffic':
@@ -192,7 +192,7 @@ $item_str
                 if($attr['status']==0){
                     $content="结果正常";$result=$this->transText($obj,$content);
                 }else{
-                    $content="发生了位置的错误";
+                    $content="发生了位置的错误".substr($keyword,2);
                     $result=$this->transText($obj,$content);
                 }
             }

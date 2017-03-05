@@ -64,3 +64,1123 @@
 </xml>
 05:42:11 T 
 
+03:32:45 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598315</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.489944</Latitude>
+<Longitude>120.362648</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+03:32:45 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598315</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[位置]]></EventKey>
+</xml>
+03:32:45 T 
+
+03:32:45 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488598365</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[菜单推送事件]]></Content>
+    </xml>
+        
+03:32:47 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598318</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.soso.com/]]></EventKey>
+<MenuId>426306743</MenuId>
+</xml>
+03:32:47 T 
+
+03:32:50 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598321</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.489944</Latitude>
+<Longitude>120.362648</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+03:32:50 T 
+
+03:32:51 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598322</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://v.qq.com/]]></EventKey>
+<MenuId>426306743</MenuId>
+</xml>
+03:32:51 T 
+
+03:32:54 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598324</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://b8107.cn/location]]></EventKey>
+<MenuId>426306743</MenuId>
+</xml>
+03:32:54 T 
+
+03:32:56 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598327</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.490032</Latitude>
+<Longitude>120.362633</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+03:32:56 T 
+
+03:33:02 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488598332</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.490019</Latitude>
+<Longitude>120.362648</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+03:33:02 T 
+
+04:37:51 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488602214</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.490019</Latitude>
+<Longitude>120.362648</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+04:37:51 T 
+
+04:38:03 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488602225</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[music]]></EventKey>
+</xml>
+04:38:03 T 
+<xml>
+<ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+<FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+<CreateTime>1488602283</CreateTime>
+<MsgType><![CDATA[music]]></MsgType>
+<Music>
+    <Title><![CDATA[FSN]]></Title>
+    <Description><![CDATA[超燃]]></Description>
+    <MusicUrl><![CDATA[http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3]]></MusicUrl>
+    <HQMusicUrl><![CDATA[http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3]]></HQMusicUrl>
+</Music>
+</xml>
+04:39:52 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488602334</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[V1001_GOOD]]></EventKey>
+</xml>
+04:39:52 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488602392</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[菜单推送事件]]></Content>
+    </xml>
+        
+04:43:20 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488602542</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[位置]]></EventKey>
+</xml>
+04:43:20 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488602600</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[菜单推送事件]]></Content>
+    </xml>
+        
+05:53:15 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488606789</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[custom_service]]></EventKey>
+</xml>
+05:53:15 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488606795</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[菜单推送事件]]></Content>
+    </xml>
+        
+11:07:38 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488625613</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[图文]]></Content>
+<MsgId>6393598324249769437</MsgId>
+</xml>
+11:07:38 T 
+
+<xml>
+<ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+<FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+<CreateTime>1488625658</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>4</ArticleCount>
+<Articles>
+     
+<item> 
+<Title><![CDATA[标题1]]></Title>
+<Description><![CDATA[描述1]]></Description>
+<PicUrl><![CDATA[http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg]]></PicUrl>
+<Url><![CDATA[http://www.weixinsucai.com/zhichangren/00030690]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[标题2]]></Title>
+<Description><![CDATA[描述2]]></Description>
+<PicUrl><![CDATA[http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg]]></PicUrl>
+<Url><![CDATA[http://www.weixinsucai.com/zhichangren/00030690]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[标题3]]></Title>
+<Description><![CDATA[描述3]]></Description>
+<PicUrl><![CDATA[http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg]]></PicUrl>
+<Url><![CDATA[http://www.weixinsucai.com/zhichangren/00030690]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[标题4]]></Title>
+<Description><![CDATA[描述4]]></Description>
+<PicUrl><![CDATA[http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg]]></PicUrl>
+<Url><![CDATA[http://www.weixinsucai.com/zhichangren/00030690]]></Url>
+</item>
+</Articles>
+</xml>
+11:52:07 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488628277</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479836</Latitude>
+<Longitude>120.376251</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+11:52:07 T 
+
+11:52:11 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488628281</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[traffic]]></EventKey>
+</xml>
+11:52:11 T 
+
+<xml>
+<ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+<FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+<CreateTime>1488628331</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>7</ArticleCount>
+<Articles>
+     
+<item> 
+<Title><![CDATA[交通信息]]></Title>
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[]]></PicUrl>
+<Url><![CDATA[http://m.8684.cn/bus]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[【公交线路】
+全车公交查询]]></Title>
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[http://photo.candou.com/ai/114/09caed4a27c56000bb870c68ab028850]]></PicUrl>
+<Url><![CDATA[http://m.8684.cn/shenzhen_bus]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[【汽车班次】
+长途汽车班车]]></Title>
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[http://photo.candou.com/i/175/4951bd2a2f368cafc5ad09ff95ce591d]]></PicUrl>
+<Url><![CDATA[http://touch.trip8080.com/]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[【火车时刻】
+火车时刻查询]]></Title>
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[http://photo.candou.com/ai/114/26a9407dcedda5f4a30b195f78ec3680]]></PicUrl>
+<Url><![CDATA[http://m.ctrip.com/html5/Trains/]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[【飞 机 票】
+机票查询]]></Title>
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[http://photo.candou.com/i/175/a1bd6303a8bde7da50166aa8dafb7568]]></PicUrl>
+<Url><![CDATA[http://touch.qunar.com/h5/flight/]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[【城市路况】
+重点城市实时路况]]></Title>
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[http://photo.candou.com/i/175/0d8488edf94574651d048025596a6190]]></PicUrl>
+<Url><![CDATA[http://dp.sina.cn/dpool/tools/citytraffic/city.php]]></Url>
+</item> 
+<item> 
+<Title><![CDATA[【违章查询】
+全国违章查询]]></Title>
+<Description><![CDATA[]]></Description>
+<PicUrl><![CDATA[http://g.hiphotos.bdimg.com/wisegame/pic/item/9e1f4134970a304eab30503cd0c8a786c8175ce2.jpg]]></PicUrl>
+<Url><![CDATA[http://app.eclicks.cn/violation2/webapp/index?appid=10]]></Url>
+</item>
+</Articles>
+</xml>
+11:52:24 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488628294</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479836</Latitude>
+<Longitude>120.376251</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+11:52:24 T 
+
+13:18:34 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633453</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>2590.000000</Precision>
+</xml>
+13:18:34 T 
+
+13:18:36 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633455</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[V1001_GOOD]]></EventKey>
+</xml>
+13:18:36 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633516</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[菜单推送事件]]></Content>
+    </xml>
+        
+13:18:47 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633466</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气]]></Content>
+<MsgId>6393632052627948247</MsgId>
+</xml>
+13:18:47 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633527</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+13:18:56 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633475</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393632091282653919</MsgId>
+</xml>
+13:18:56 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633536</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+13:19:44 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633523</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡]]></Content>
+<MsgId>6393632297441084156</MsgId>
+</xml>
+13:19:44 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633584</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+13:19:48 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633527</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393632314620953345</MsgId>
+</xml>
+13:19:48 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633588</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+13:20:52 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633591</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+13:20:52 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633652</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[Share-Car希望能与您再会！]]></Content>
+    </xml>
+        
+13:21:01 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633600</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+13:21:01 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633661</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[欢迎关注Share-Car！]]></Content>
+    </xml>
+        
+13:21:09 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633609</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>2590.000000</Precision>
+</xml>
+13:21:09 T 
+
+13:21:12 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633611</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气]]></Content>
+<MsgId>6393632675398206272</MsgId>
+</xml>
+13:21:12 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633672</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+13:21:18 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633617</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡天气]]></Content>
+<MsgId>6393632701168010057</MsgId>
+</xml>
+13:21:18 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633678</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+13:21:22 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488633621</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393632718347879249</MsgId>
+</xml>
+13:21:22 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488633682</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+13:27:55 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488634013</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>2590.000000</Precision>
+</xml>
+13:27:55 T 
+
+13:28:16 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488634034</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>2590.000000</Precision>
+</xml>
+13:28:16 T 
+
+13:28:26 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488634044</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393634535119045687</MsgId>
+</xml>
+13:28:31 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488634111</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[发生了位置的错误]]></Content>
+    </xml>
+        
+13:29:43 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488634121</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393634865831527511</MsgId>
+</xml>
+13:29:44 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488634184</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[�气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+13:31:01 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488634198</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393635196544009339</MsgId>
+</xml>
+13:31:02 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488634262</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[�气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+13:31:26 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488634224</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>2590.000000</Precision>
+</xml>
+13:31:26 T 
+
+13:48:56 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635272</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>1460.000000</Precision>
+</xml>
+13:48:56 T 
+
+13:49:00 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635275</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡天气]]></Content>
+<MsgId>6393639822223787722</MsgId>
+</xml>
+13:49:00 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635340</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��锡天气发生了位置的错误]]></Content>
+    </xml>
+        
+13:49:23 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635299</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡天气]]></Content>
+<MsgId>6393639925303002842</MsgId>
+</xml>
+13:49:24 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635364</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��锡天气发生了位置的错误]]></Content>
+    </xml>
+        
+13:49:36 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635311</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393639976842610401</MsgId>
+</xml>
+13:49:36 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635376</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+13:50:11 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635347</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393640131461433088</MsgId>
+</xml>
+13:50:11 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635411</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+13:52:43 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635499</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393640784296462201</MsgId>
+</xml>
+13:52:44 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635564</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+13:52:56 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635511</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+13:52:56 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635576</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[Share-Car希望能与您再会！]]></Content>
+    </xml>
+        
+13:53:14 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635529</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+13:53:14 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635594</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[欢迎关注Share-Car！]]></Content>
+    </xml>
+        
+13:53:18 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635533</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>2590.000000</Precision>
+</xml>
+13:53:18 T 
+
+13:53:21 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488635536</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393640943210252180</MsgId>
+</xml>
+13:53:21 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488635601</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+14:00:02 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636002</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479761</Latitude>
+<Longitude>120.377571</Longitude>
+<Precision>2590.000000</Precision>
+</xml>
+14:00:02 T 
+
+14:00:07 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636007</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393642966139848920</MsgId>
+</xml>
+14:00:07 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636007</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[没有结果啊]]></Content>
+    </xml>
+        
+14:00:56 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636056</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393643176593246450</MsgId>
+</xml>
+14:00:57 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636057</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+14:01:52 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636112</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393643417111415052</MsgId>
+</xml>
+14:01:52 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636112</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+14:11:14 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636673</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479851</Latitude>
+<Longitude>120.376251</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+14:11:14 T 
+
+14:11:17 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636676</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡]]></Content>
+<MsgId>6393645839472970294</MsgId>
+</xml>
+14:11:17 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636677</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[共享汽车-技术总监 刘康平 编写]]></Content>
+    </xml>
+        
+14:11:21 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636680</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡天气]]></Content>
+<MsgId>6393645856652839481</MsgId>
+</xml>
+14:11:22 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636682</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��锡天气发生了位置的错误]]></Content>
+    </xml>
+        
+14:13:18 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636797</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479836</Latitude>
+<Longitude>120.376251</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+14:13:18 T 
+
+14:13:22 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636800</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393646372048915064</MsgId>
+</xml>
+14:13:22 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636802</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+14:13:38 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636817</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+14:13:38 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636818</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[Share-Car希望能与您再会！]]></Content>
+    </xml>
+        
+14:13:45 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636824</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+14:13:45 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636825</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[欢迎关注Share-Car！]]></Content>
+    </xml>
+        
+14:13:48 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636827</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479836</Latitude>
+<Longitude>120.376251</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+14:13:48 T 
+
+14:13:52 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636831</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡天气]]></Content>
+<MsgId>6393646505192901252</MsgId>
+</xml>
+14:13:52 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636832</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��锡天气发生了位置的错误]]></Content>
+    </xml>
+        
+14:13:59 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488636837</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393646530962705034</MsgId>
+</xml>
+14:13:59 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488636839</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[��气无锡发生了位置的错误]]></Content>
+    </xml>
+        
+14:18:59 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488637137</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[无锡天气]]></Content>
+<MsgId>6393647819452893977</MsgId>
+</xml>
+14:19:00 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488637140</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[发生了位置的错误无锡天气]]></Content>
+    </xml>
+        
+14:19:08 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488637146</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479851</Latitude>
+<Longitude>120.376251</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+14:19:08 T 
+
+14:19:14 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488637152</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393647883877403423</MsgId>
+</xml>
+14:19:15 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488637155</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[发生了位置的错误天气无锡]]></Content>
+    </xml>
+        
+14:22:34 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488637351</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479820</Latitude>
+<Longitude>120.376266</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+14:22:34 T 
+
+14:36:46 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488638201</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.479836</Latitude>
+<Longitude>120.376251</Longitude>
+<Precision>30.000000</Precision>
+</xml>
+14:36:46 T 
+
+14:36:48 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488638204</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393652402182999086</MsgId>
+</xml>
+14:36:53 R 
+<xml><ToUserName><![CDATA[gh_24ada4ea2c6a]]></ToUserName>
+<FromUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></FromUserName>
+<CreateTime>1488638204</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[天气无锡]]></Content>
+<MsgId>6393652402182999086</MsgId>
+</xml>
+14:36:54 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488638214</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[发生了位置的错误�气无锡]]></Content>
+    </xml>
+        
+14:36:54 T 
+
+    <xml>
+    <ToUserName><![CDATA[oq7mZw5JPoFoETIoL0GYr2mfnPF0]]></ToUserName>
+    <FromUserName><![CDATA[gh_24ada4ea2c6a]]></FromUserName>
+    <CreateTime>1488638214</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[发生了位置的错误�气无锡]]></Content>
+    </xml>
+        
