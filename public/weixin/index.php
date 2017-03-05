@@ -196,8 +196,8 @@ $item_str
                         "Description"=>"",
                         "PicUrl"=>"",
                         "Url" =>"");
-                    $content=$weatherArray;$result=$this->transNews($obj,$content);
                 }
+                $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
         }
         else{
