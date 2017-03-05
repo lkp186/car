@@ -200,7 +200,7 @@ $item_str
 //                        "PicUrl"=>"",
 //                        "Url" =>"");
 //                }
-                $content='查询的城市是'.$attr['results'][0]['location']['name'];$result=$this->transText($obj,$content);
+                $content='测试中城市'.$attr['results'][0]['location']['name'];$result=$this->transText($obj,$content);
             }
         }
         else{
