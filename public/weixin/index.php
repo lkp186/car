@@ -189,7 +189,7 @@ $item_str
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
             }else{
-                $weather=$attr['result'];
+                $weather=$attr['results'];
                 $weatherArray[] = array("Title" =>$weather['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
                 for ($i = 0; $i < count($weather["daily"]); $i++) {
                     $weatherArray[] = array("Title"=>$weather['daily']['date']."\n",
