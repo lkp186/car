@@ -196,7 +196,7 @@ $item_str
 //                        "PicUrl"=>"",
 //                        "Url" =>"");
 //                }
-                $content=$attr['results'][0]['location']['name'];$result=$this->transText($obj,$content);
+                $content='就等着天气数组了';$result=$this->transText($obj,$content);
             }
         }
         else{
