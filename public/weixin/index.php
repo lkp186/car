@@ -189,7 +189,7 @@ $item_str
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
             }else{
-                if($attr['status']==0){
+                if($attr['error']==0){
                     $content="结果正常";$result=$this->transText($obj,$content);
                 }else{
                     $content="发生了位置的错误".mb_substr($keyword,2,10,"utf-8");
