@@ -197,7 +197,7 @@ $item_str
                         "PicUrl"=>"",
                         "Url" =>"");
                 }
-                $content=$attr;$result=$this->transText($obj,$content);
+                $content=$attr['results'][0]['location']['name'];$result=$this->transText($obj,$content);
             }
         }
         else{
