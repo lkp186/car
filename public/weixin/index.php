@@ -202,7 +202,7 @@ $item_str
                             "Description"=>"",
                             "PicUrl"=>(($curHour >= 6) && ($curHour < 18))?$weather["weather_data"][$i]["dayPictureUrl"]:$weather["weather_data"][$i]["nightPictureUrl"], "Url"=>"");
                     }
-                    $content=$weatherArray;$result=$this->transNews($obj,$content);
+                    $content=$attr['status'];$result=$this->transText($obj,$content);
                 }else{
                     $content="发生了位置的错误".mb_substr($keyword,2,10,"utf-8");
                     $result=$this->transText($obj,$content);
