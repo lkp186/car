@@ -189,15 +189,15 @@ $item_str
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
             }else{
-//                $weather=$attr['results'];
-//                $weatherArray[] = array("Title" =>$weather[0]['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
-//                for ($i = 0; $i < count($weather["daily"]-1); $i++) {
-//                    $weatherArray[] = array("Title"=>$weather['daily']['date']."\n",
-//                        "Description"=>"",
-//                        "PicUrl"=>"",
-//                        "Url" =>"");
-//                }
-                $content='测试中城市'.$attr['results'][0]['location']['name'];$result=$this->transText($obj,$content);
+                $weather=$attr['results'][0];
+                $weatherArray[] = array("Title" =>$weather['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
+                for ($i = 0; $i < count($weather["daily"])-1; $i++) {
+                    $weatherArray[] = array("Title"=>$weather['daily']['date']."\n",
+                        "Description"=>"",
+                        "PicUrl"=>"",
+                        "Url" =>"");
+                }
+                $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
         }
         else{
