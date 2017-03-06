@@ -18,7 +18,6 @@ class WeatherController extends Controller
     }
 
 
-
     //curl
     public function http_request($url,$data=null){
         $curl=curl_init();

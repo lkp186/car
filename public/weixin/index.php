@@ -82,6 +82,7 @@ class wechatCallbackapiTest
                         $result=$this->transNews($obj,$content);
                         break;
                     case 'weather':$content="请发送天气+城市名来查询天气例如：\n天气无锡";
+                        $result=$this->transText($obj,$content);
                         break;
                     default:$content='菜单推送事件';$result=$this->transText($obj,$content);
                 };

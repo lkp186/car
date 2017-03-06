@@ -88,7 +88,7 @@ $json_menu='
            {
                "type":"click",
                "name":"当前天气",
-               "key":"V1001_GOOD"
+               "key":"weather"
            },
            {
                "type":"click",
