@@ -192,9 +192,10 @@ $item_str
                 $weather=$attr['results'][0];
                 $weatherArray[] = array("Title" =>$weather['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
                 for ($i = 0; $i < count($weather["daily"]); $i++) {
-                    $weatherArray[] = array("Title"=>$weather['daily'][$i]['date']."\n",
-                        "Description"=>$weather['daily'][$i]['text_day']."\t\t最高温度:\t".$weather['daily'][$i]['high']
-                            ."\t\t最低温度:\t".$weather['daily'][$i]['low'],
+                    $weatherArray[] = array(
+                        "Title"=>$weather['daily'][$i]['date']."\n",
+                        "Description"=>$weather['daily'][$i]['text_day']."最高温度:".$weather['daily'][$i]['high']
+                            ."最低温度:".$weather['daily'][$i]['low'],
                         "PicUrl"=>"http://b8107.cn/public/weixin/weather/".$weather['daily'][$i]['code_day'].'png',
                         "Url" =>""
                     );
