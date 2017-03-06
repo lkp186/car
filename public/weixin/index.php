@@ -81,6 +81,8 @@ class wechatCallbackapiTest
                         $content[] = array("Title" =>"【违章查询】\n全国违章查询", "Description" =>"", "PicUrl" =>"http://g.hiphotos.bdimg.com/wisegame/pic/item/9e1f4134970a304eab30503cd0c8a786c8175ce2.jpg", "Url" =>"http://app.eclicks.cn/violation2/webapp/index?appid=10");
                         $result=$this->transNews($obj,$content);
                         break;
+                    case 'weather':$content="请发送天气+城市名来查询天气例如：\n天气无锡";
+                        break;
                     default:$content='菜单推送事件';$result=$this->transText($obj,$content);
                 };
                 break;
