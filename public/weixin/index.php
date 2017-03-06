@@ -196,7 +196,7 @@ $item_str
                 $weatherArray[] = array(
                     "Title" =>$weather['location']['name']."天气预报",
                     "Description" =>"",
-                    "PicUrl" =>"https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488794826&di=dfeb647edcc6bc76cc6925a75be6061e&src=http://i.weather.com.cn/images/chongqing/newzt/ty/2014/03/18/D42B7910554E0FC4A9366DB9A985F061.png",
+                    "PicUrl" =>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488805179719&di=2433fad01a1c315a33e71441337424bf&imgtype=0&src=http%3A%2F%2Fimage79.360doc.com%2FDownloadImg%2F2014%2F11%2F2510%2F47439658_27.jpg",
                     "Url" =>"");
                 for ($i = 0; $i < count($weather["daily"]); $i++) {
                     $img=$weather['daily'][$i]['code_day'];
