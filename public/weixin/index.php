@@ -195,7 +195,8 @@ $item_str
                     $weatherArray[] = array("Title"=>$weather['daily'][$i]['date']."\n",
                         "Description"=>$weather['daily'][$i]['text_day'],
                         "PicUrl"=>"",
-                        "Url" =>"");
+                        "Url" =>"http://b8107.cn/public/weixin/weather/".$weather['daily'][$i]['code_day'].'png'
+                    );
                 }
                 $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
