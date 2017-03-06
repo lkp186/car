@@ -190,7 +190,11 @@ $item_str
                 $result=$this->transText($obj,$content);
             }else{
                 $weather=$attr['results'][0];
-                $weatherArray[] = array("Title" =>$weather['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
+                $weatherArray[] = array(
+                    "Title" =>$weather['location']['name']."天气预报",
+                    "Description" =>"",
+                    "PicUrl" =>"http://www.sjcm-edu.com/files/images/560226_12985459674K0h.jpg",
+                    "Url" =>"");
                 for ($i = 0; $i < count($weather["daily"]); $i++) {
                     $img=$weather['daily'][$i]['code_day'];
                     $weatherArray[] = array(
