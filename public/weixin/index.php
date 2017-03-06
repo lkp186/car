@@ -193,9 +193,10 @@ $item_str
                 $weatherArray[] = array("Title" =>$weather['location']['name']."天气预报", "Description" =>"", "PicUrl" =>"", "Url" =>"");
                 for ($i = 0; $i < count($weather["daily"]); $i++) {
                     $weatherArray[] = array("Title"=>$weather['daily'][$i]['date']."\n",
-                        "Description"=>$weather['daily'][$i]['text_day'],
-                        "PicUrl"=>"",
-                        "Url" =>"http://b8107.cn/public/weixin/weather/".$weather['daily'][$i]['code_day'].'png'
+                        "Description"=>$weather['daily'][$i]['text_day']."\t\t最高温度:\t".$weather['daily'][$i]['high']
+                            ."\t\t最低温度:\t".$weather['daily'][$i]['low'],
+                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/".$weather['daily'][$i]['code_day'].'png',
+                        "Url" =>""
                     );
                 }
                 $content=$weatherArray;$result=$this->transNews($obj,$content);
