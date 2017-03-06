@@ -12,7 +12,7 @@ class WeatherController extends Controller
     //向天气api发送请求
     public function index(Request $request){
         $city=urlencode($request->input('city'));
-        $url = "https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=$city&language=zh-Hans&unit=c&start=0&days=3";
+        $url = "https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=$city&language=zh-Hans&unit=c&start=0&days=5";
         $json=$this->http_request($url);
         return $json;
     }
