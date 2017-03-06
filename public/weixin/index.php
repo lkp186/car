@@ -84,7 +84,7 @@ class wechatCallbackapiTest
                     case 'weather':$content="请发送天气+城市名来查询天气例如：\n天气无锡";
                         $result=$this->transText($obj,$content);
                         break;
-                    default:$content='菜单推送事件';$result=$this->transText($obj,$content);
+                    default:$content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
                 };
                 break;
         }
@@ -196,7 +196,7 @@ $item_str
                 $weatherArray[] = array(
                     "Title" =>$weather['location']['name']."天气预报",
                     "Description" =>"",
-                    "PicUrl" =>"http://www.sjcm-edu.com/files/images/560226_12985459674K0h.jpg",
+                    "PicUrl" =>"https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488794826&di=dfeb647edcc6bc76cc6925a75be6061e&src=http://i.weather.com.cn/images/chongqing/newzt/ty/2014/03/18/D42B7910554E0FC4A9366DB9A985F061.png",
                     "Url" =>"");
                 for ($i = 0; $i < count($weather["daily"]); $i++) {
                     $img=$weather['daily'][$i]['code_day'];
