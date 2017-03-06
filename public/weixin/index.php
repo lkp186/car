@@ -195,8 +195,8 @@ $item_str
                     $img=$weather['daily'][$i]['code_day'];
                     $weatherArray[] = array(
                         "Title"=>$weather['daily'][$i]['date']."\n".$weather['daily'][$i]['text_day']
-                            ."\t最高温度:".$weather['daily'][$i]['high']."℃"
-                            ."\t最低温度:".$weather['daily'][$i]['low']."℃",
+                            ."\t最高温度:\t".$weather['daily'][$i]['high']."℃"
+                            ."\t最低温度:\t".$weather['daily'][$i]['low']."℃",
                         "Description"=>"",
                         "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
                         "Url" =>""
