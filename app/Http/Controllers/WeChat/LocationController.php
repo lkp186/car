@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\WeChat;
 
+use App\Http\Model\WeChat\We_chat_user_location;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,6 +13,16 @@ class LocationController extends Controller
     //用户进入会话是存储用户的地理位置
     public function saveLocation(Request $request){
         $OpenID=$request->input('OpenID');
+        $content=$request->input('content');
+        $id=We_chat_user_location::where('OpenID',$OpenID)->value('OpenID');
+        if(empty($id)){
+            $location=new We_chat_user_location;
+            $location->OpenID=$OpenID;
+            $location->location=$content;
+            $location->save();
+        }else{
+            We_chat_user_location::where('OpenID',$OpenID)->update(['location'=>$content]);
+        }
     }
 
 

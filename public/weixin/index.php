@@ -64,14 +64,22 @@ class wechatCallbackapiTest
             case 'unsubscribe':$content="Share-Car希望能与您再会！"; $result=$this->transText($obj,$content);
                 break;
             case 'LOCATION':
-                if(isset($obj->Latitude)){
-                    $content="由于您拒绝共享位置，您的位置无法获取";$result=$this->transText($obj,$content);
-                }else{
-                    $OpenID=$obj->FromUserName;
-                    $url="http://b8107.cn/saveLocation?OpenID=$OpenID";
-                    $this->http_request($url);
-                }break;
-
+                $url_org="http://api.map.baidu.com/geoconv/v1/?ak=yGzMC6nFDKrQ5rosSBaAywLPj94HBpmo&coords=$obj->Latitude,$obj->Longitude&from=3&output=json";
+                $json_org= $json=file_get_contents($url_org);
+                $attr_org=json_decode($json_org,true);
+                $x=$attr_org['result'][0]['x'];
+                $y=$attr_org['result'][0]['y'];
+                $url="http://api.map.baidu.com/geocoder/v2/?location=$x,$y&output=json&coordtype=gcj0211&ak=yGzMC6nFDKrQ5rosSBaAywLPj94HBpmo";
+                $json=file_get_contents($url);
+                $attr=json_decode($json,true);
+                $OpenID=$obj->FromUserName;
+                $content=$attr['result']['addressComponent']['province'].'_';
+                $content.=$attr['result']['addressComponent']['city'].'_';
+                $content.=$attr['result']['addressComponent']['district'].'_';
+                $content.=$attr['result']['addressComponent']['street'];
+                //将每一次用户进入会话时的位置存入数据库
+                $this->http_request("http://b8107.cn/saveLocation?OpenID=$OpenID&content=$content");
+                break;
             case 'CLICK':
                 switch ($obj->EventKey){
                     case 'music':
