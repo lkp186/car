@@ -28,10 +28,18 @@ class LocationController extends Controller
 
 
 
-    //获取用户地理位置
+    //查询用户地理位置，若不存在则用户拒绝了共享位置
     public function index(Request $request){
         $OpenID=$request->input('OpenID');
-
+        $location=We_chat_user_location::where('OpenID',$OpenID)->value('location');
+        if(empty($location)){
+            $attr=array('msg'=>urlencode('您没有给予我们获取您位置的权限，很遗憾'));
+            $json=urldecode(json_encode($attr));
+        }else{
+            $attr=array('msg'=>urlencode("您的地理位置大致是\n".$location));
+            $json=urldecode(json_encode($attr));
+        }
+        return $json;
     }
 
     //CURL
