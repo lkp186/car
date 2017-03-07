@@ -150,6 +150,8 @@ Route::group(['middleware' => ['web','admin'],'prefix'=>'admin','namespace'=>'Ad
 Route::group(['middleware'=>'web','namespace'=>'WeChat'],function (){
     Route::get('custom/service','CustomServiceController@index');//客服接口
     Route::get('weather','WeatherController@index');//查询天气
+    Route::get('location','LocationController@index');//用户位置
+    Route::get('saveLocation','LocationController@saveLocation');
 });
 
 

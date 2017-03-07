@@ -63,6 +63,15 @@ class wechatCallbackapiTest
                 break;
             case 'unsubscribe':$content="Share-Car希望能与您再会！"; $result=$this->transText($obj,$content);
                 break;
+            case 'LOCATION':
+                if(isset($obj->Latitude)){
+                    $content="由于您拒绝共享位置，您的位置无法获取";$result=$this->transText($obj,$content);
+                }else{
+                    $OpenID=$obj->FromUserName;
+                    $url="http://b8107.cn/saveLocation?OpenID=$OpenID";
+                    $this->http_request($url);
+                }
+
             case 'CLICK':
                 switch ($obj->EventKey){
                     case 'music':
@@ -85,8 +94,18 @@ class wechatCallbackapiTest
                         $result=$this->transText($obj,$content);
                         break;
                     case 'custom_service':
-                        $this->http_request();
                         $content="这是客服接口";$result=$this->transText($obj,$content);break;
+                    case '位置':
+                        $OpenID=$obj->FromUserName;
+                        $url="http://b8107.cn/location?OpenID=$OpenID";
+                        $json=$this->http_request($url);
+                        $attr=json_decode($json,true);
+                        if(!empty($attr)){
+                            $content="您的当前位置是";$result=$this->transText($obj,$content);
+                        }else{
+                            $content="由于您拒绝共享位置，您的位置无法获取";$result=$this->transText($obj,$content);
+                        }
+                        break;
                     default:$content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
                 };
                 break;
@@ -216,8 +235,7 @@ $item_str
                 }
                 $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
-        }
-        else{
+        }else{
             $content="共享汽车-技术总监 刘康平 编写";
         }
 
