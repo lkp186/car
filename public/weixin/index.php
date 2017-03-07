@@ -70,7 +70,7 @@ class wechatCallbackapiTest
                     $OpenID=$obj->FromUserName;
                     $url="http://b8107.cn/saveLocation?OpenID=$OpenID";
                     $this->http_request($url);
-                }
+                }break;
 
             case 'CLICK':
                 switch ($obj->EventKey){
