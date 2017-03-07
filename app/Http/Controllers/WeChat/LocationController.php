@@ -34,10 +34,10 @@ class LocationController extends Controller
         $location=We_chat_user_location::where('OpenID',$OpenID)->value('location');
         if(!empty($location))
         {
-            $attr=array('msg'=>$location);
+            $attr=array('msg'=>$location,'error'=>0);
             $json=json_encode($attr,true);
         }else{
-            $attr=array('msg'=>'傻逼的系统');
+            $attr=array('msg'=>'傻逼的系统','error'=>1);
             $json=json_encode($attr,true);
         }
         return $json;
