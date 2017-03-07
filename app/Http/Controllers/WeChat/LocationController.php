@@ -34,7 +34,7 @@ class LocationController extends Controller
         $OpenID=$request->input('OpenID');
         $time=We_chat_user_location::where('OpenID',$OpenID)->value('time');
         //删除超过一个小时以上的用户的位置信息(防止用户中途取消获取位置后还能读取到过期的位置)
-        if(($time-time())>3600){
+        if((time()-$time)>3600){
             We_chat_user_location::destroy($OpenID);
         }
         $location=We_chat_user_location::where('OpenID',$OpenID)->value('location');
