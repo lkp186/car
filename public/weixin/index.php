@@ -117,8 +117,6 @@ class wechatCallbackapiTest
                         break;
                     default:
                         //假如用户没有开启获取地理位置的权限则会执行该操作，删除数据库中用户的地理位置
-                        $OpenID=$obj->FromUserName;
-                        $this->http_request("http://b8107.cn/delLocation?OpenID=$OpenID");
                         $content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
                 };
                 break;

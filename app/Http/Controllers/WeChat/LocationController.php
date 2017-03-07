@@ -15,10 +15,12 @@ class LocationController extends Controller
         $OpenID=$request->input('OpenID');
         $content=$request->input('content');
         $id=We_chat_user_location::where('OpenID',$OpenID)->value('OpenID');
+        date_default_timezone_set('PRC');
         if(empty($id)){
             $location=new We_chat_user_location;
             $location->OpenID=$OpenID;
             $location->location=$content;
+            $location->time=time();
             $location->save();
         }else{
             We_chat_user_location::where('OpenID',$OpenID)->update(['location'=>$content]);
@@ -28,7 +30,13 @@ class LocationController extends Controller
 
     //查询用户地理位置，若不存在则用户拒绝了共享位置
     public function index(Request $request){
+        date_default_timezone_set('PRC');
         $OpenID=$request->input('OpenID');
+        $time=We_chat_user_location::where('OpenID',$OpenID)->value('time');
+        //删除超过一个小时以上的用户的位置信息(防止用户中途取消获取位置后还能读取到过期的位置)
+        if(($time-time())>3600){
+            We_chat_user_location::destroy($OpenID);
+        }
         $location=We_chat_user_location::where('OpenID',$OpenID)->value('location');
         if(!empty($location))
         {
@@ -39,15 +47,6 @@ class LocationController extends Controller
             $json=json_encode($attr,true);
         }
         return $json;
-    }
-
-    //若用户取消获取地理位置，则删除该用户地理位置的信息
-    public function delLocation(Request $request){
-        $OpenID=$request->input('OpenID');
-        $location=We_chat_user_location::where('OpenID',$OpenID)->value('location');
-        if(!empty($location)){
-            We_chat_user_location::destroy($OpenID);
-        }
     }
 
     //CURL
