@@ -35,7 +35,7 @@ class LocationController extends Controller
         if(!empty($location))
         {
             $attr=array('msg'=>urlencode($location));
-            $json=json_encode($attr);
+            $json=json_encode($attr,true);
         }
         return $json;
     }
