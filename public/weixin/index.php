@@ -107,7 +107,7 @@ class wechatCallbackapiTest
                         $OpenID=$obj->FromUserName;
                         $url="http://b8107.cn/location?OpenID=$OpenID";
                         $json=$this->http_request($url);
-                        $attr=json_decode($json,true);
+                        $attr=urldecode(json_decode($json,true));
                         $content=$attr['msg'];$result=$this->transText($obj,$content);
                         break;
                     default:$content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
