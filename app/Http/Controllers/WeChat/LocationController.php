@@ -33,9 +33,6 @@ class LocationController extends Controller
         $OpenID=$request->input('OpenID');
         $location=We_chat_user_location::where('OpenID',$OpenID)->value('location');
         if(empty($location)){
-            $json='{
-                "status":"0"
-            }';
         }else{
             $attr=array('status'=>'1','msg'=>urlencode($location));
             $json=json_encode($attr);

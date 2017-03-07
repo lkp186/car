@@ -108,7 +108,7 @@ class wechatCallbackapiTest
                         $url="http://b8107.cn/location?OpenID=$OpenID";
                         $json=$this->http_request($url);
                         $attr=urldecode(json_decode($json,true));
-                        if($attr['status']==0){
+                        if(empty($attr['msg'])){
                             $content="我们没有获取您地理位置的权限，很遗憾";
                         }else{
                             $content=$attr['msg'];
