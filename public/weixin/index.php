@@ -90,8 +90,8 @@ class wechatCallbackapiTest
                     case '新人指引':
                         $content[] = array(
                             "Title" =>"新人指引",
-                            "Description" =>"",
-                            "PicUrl" =>"",
+                            "Description" =>"share-car带你走入不一样的世界",
+                            "PicUrl" =>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488903799502&di=932d03e6f4c2c268c7990a5fc16ab4e5&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1210%2F23%2Fc1%2F14589948_1350977796661.jpg",
                             "Url" =>"http://b8107.cn/help"
                         );
                         $result=$this->transNews($obj,$content);
