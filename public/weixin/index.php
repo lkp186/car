@@ -87,6 +87,15 @@ class wechatCallbackapiTest
                             'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
                         $result=$this->transMusic($obj,$content);
                         break;
+                    case '新人指引':
+                        $content[] = array(
+                            "Title" =>"新人指引",
+                            "Description" =>"",
+                            "PicUrl" =>"",
+                            "Url" =>"http://b8107.cn/help"
+                        );
+                        $result=$this->transNews($obj,$content);
+                        break;
                     case 'traffic':
                         $content[] = array("Title" =>"交通信息","Description" =>"", "PicUrl" =>"", "Url" =>"http://m.8684.cn/bus");
                         $content[] = array("Title" =>"【公交线路】\n全车公交查询", "Description" =>"", "PicUrl" =>"http://photo.candou.com/ai/114/09caed4a27c56000bb870c68ab028850", "Url" =>"http://m.8684.cn/shenzhen_bus");
@@ -112,7 +121,6 @@ class wechatCallbackapiTest
                         }else{
                             $content="我们无权获取您的位置";
                         }
-
                         $result=$this->transText($obj,$content);
                         break;
                     default:

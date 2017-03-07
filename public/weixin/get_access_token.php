@@ -41,9 +41,9 @@ $json_menu='
           "name":"先点我",
            "sub_button":[
            {
-               "type":"view",
+               "type":"click",
                "name":"新人指引",
-               "url":"http://www.soso.com/"
+               "key":"新人指引"
            },
            {
                "type":"click",

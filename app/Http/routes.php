@@ -152,6 +152,7 @@ Route::group(['middleware'=>'web','namespace'=>'WeChat'],function (){
     Route::get('weather','WeatherController@index');//查询天气
     Route::get('location','LocationController@index');//用户位置
     Route::get('saveLocation','LocationController@saveLocation');//保存用户的地理位置
+    Route::get('help','CommonController@help');
 });
 
 
