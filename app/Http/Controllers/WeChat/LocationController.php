@@ -26,8 +26,6 @@ class LocationController extends Controller
     }
 
 
-
-
     //查询用户地理位置，若不存在则用户拒绝了共享位置
     public function index(Request $request){
         $OpenID=$request->input('OpenID');
@@ -41,6 +39,15 @@ class LocationController extends Controller
             $json=json_encode($attr,true);
         }
         return $json;
+    }
+
+    //若用户取消获取地理位置，则删除该用户地理位置的信息
+    public function delLocation(Request $request){
+        $OpenID=$request->input('OpenID');
+        $location=We_chat_user_location::where('OpenID',$OpenID)->value('location');
+        if(!empty($location)){
+            We_chat_user_location::destroy($OpenID);
+        }
     }
 
     //CURL

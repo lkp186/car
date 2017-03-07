@@ -57,7 +57,6 @@ class wechatCallbackapiTest
 
     //接收事件的函数
     public function receiveEvent($obj){
-        $content="";
         switch ($obj->Event){
             case 'subscribe':$content="欢迎关注Share-Car！"; $result=$this->transText($obj,$content);
                 break;
@@ -116,7 +115,11 @@ class wechatCallbackapiTest
 
                         $result=$this->transText($obj,$content);
                         break;
-                    default:$content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
+                    default:
+                        //假如用户没有开启获取地理位置的权限则会执行该操作，删除数据库中用户的地理位置
+                        $OpenID=$obj->FromUserName;
+                        $this->http_request("http://b8107.cn/delLocation?OpenID=$OpenID");
+                        $content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
                 };
                 break;
         }
