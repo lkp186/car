@@ -79,7 +79,6 @@ class wechatCallbackapiTest
                 $content.=$attr['result']['addressComponent']['street'];
                 //将每一次用户进入会话时的位置存入数据库
                 $this->http_request("http://b8107.cn/saveLocation?OpenID=$OpenID&content=$content");
-                $result=$this->transText($obj,'正在存储用户的地理位置');
                 break;
             case 'CLICK':
                 switch ($obj->EventKey){
