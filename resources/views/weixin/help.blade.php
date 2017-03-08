@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
 </head>
 <body>
-<div class="container">
-    <div class="jumbotron">
-        <h2>这是新人指引</h2>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>这是新人指引</h2>
+        </div>
     </div>
-</div>
 </body>
 </html>
