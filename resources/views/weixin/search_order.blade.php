@@ -52,6 +52,7 @@
         @endif
     </div>
 </div>
+<script src="{{asset('public/js/jquery.js')}}"></script>
 <script  src="{{asset('public/js/jqthumb.min.js')}}"></script>
 <script >
     $(function(){
