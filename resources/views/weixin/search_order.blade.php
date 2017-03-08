@@ -54,8 +54,8 @@
 <script >
     $(function(){
         $('.dowebok2').jqthumb({
-            width: 140,
-            height: 140,
+            width: 80,
+            height: 80,
             after: function(imgObj){
                 imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
             }
