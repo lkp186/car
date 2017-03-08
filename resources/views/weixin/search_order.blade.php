@@ -31,7 +31,7 @@
                                     </td>
                                     <td  style="vertical-align: middle;text-align: center"><label class="label label-danger">{{$value->order_name_ID}}</label></td>
                                     <td  style="vertical-align: middle;text-align: center"><label class="label label-success">{{$value->car_number}}</label></td>
-                                    <td style="width: 300px;vertical-align: middle;text-align: center"><img src="{{asset('public/image/yuan.png')}}">&nbsp;{{$value->order_money}}</td>
+                                    <td style="vertical-align: middle;text-align: center"><img src="{{asset('public/image/yuan.png')}}">&nbsp;{{$value->order_money}}</td>
                                 </tr>
                             </table>
                         </div>
