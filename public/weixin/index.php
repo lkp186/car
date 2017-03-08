@@ -91,7 +91,7 @@ class wechatCallbackapiTest
                         $content[] = array(
                             "Title" =>"新人指引",
                             "Description" =>"share-car带你走入不一样的世界",
-                            "PicUrl" =>"http://b8107.cn/public/weixin/car.jpg",
+                            "PicUrl" =>"http://b8107.cn/public/weixin/ss.jpg",
                             "Url" =>"http://b8107.cn/help"
                         );
                         $result=$this->transNews($obj,$content);
