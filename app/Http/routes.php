@@ -154,6 +154,7 @@ Route::group(['middleware'=>'web','namespace'=>'WeChat'],function (){
     Route::get('saveLocation','LocationController@saveLocation');//保存用户的地理位置
     Route::get('help','CommonController@help');//新人指引
     Route::get('searchOrder','CommonController@searchOrder');//订单查询
+    Route::post('searchOrder/result','CommonController@searchResult');//展示查询结果
 });
 
 

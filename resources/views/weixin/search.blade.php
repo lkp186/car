@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="row" style="margin-top: 13%;">
-    <form role="form" method="post" action="{{url('home/search/searchOrder')}}">
+    <form role="form" method="post" action="{{url('searchOrder/result')}}">
         {{csrf_field()}}
         <div class="col-lg-4 col-lg-offset-4">
             <div class="input-group">
