@@ -15,11 +15,10 @@
                     <div style="display: none;">{{date_default_timezone_set('Asia/Shanghai')}}</div>
                     @foreach($record as $value)
                         <div style="background-color: white;">
-                            <table class="table" style="font-size: 1.5em;">
+                            <table class="table">
                                 <tr class="active">
                                     <td colspan="5">{{date("Y-m-d H:i:s",$value->order_time)}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         订单编号:&nbsp;&nbsp;{{$value->order_number}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        下单人:&nbsp;&nbsp;{{$value->user_name}}
                                     </td>
                                 </tr>
                                 <tr >
@@ -33,7 +32,6 @@
                                     <td  style="vertical-align: middle;text-align: center"><label class="label label-danger">{{$value->order_name_ID}}</label></td>
                                     <td  style="vertical-align: middle;text-align: center"><label class="label label-success">{{$value->car_number}}</label></td>
                                     <td style="width: 300px;vertical-align: middle;text-align: center"><img src="{{asset('public/image/yuan.png')}}">&nbsp;{{$value->order_money}}</td>
-                                    <td style="width: 400px;vertical-align: middle;text-align: left"><img src="{{asset('public/image/local.png')}}">&nbsp;&nbsp;{{$value->car_location}}</td>
                                 </tr>
                             </table>
                         </div>
