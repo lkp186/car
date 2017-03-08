@@ -68,7 +68,7 @@ $json_menu='
            {
                "type":"view",
                "name":"订单查询",
-               "url":"http://v.qq.com/"
+               "url":"http://b8107.cn/searchOrder"
            }
            ]
      },

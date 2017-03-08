@@ -13,4 +13,7 @@ class CommonController extends Controller
     public function help(){
         return view('weixin.help');
     }
+    public function searchOrder(){
+        return view('weixin.search');
+    }
 }
