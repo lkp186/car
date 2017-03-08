@@ -26,6 +26,7 @@
         </div>
     </form>
 </div>
+<script src="{{asset('public/js/jquery.js')}}"></script>
 <script src="{{asset('public/js/sweet-alert.js')}}"></script>
 <script type="text/javascript">
     $(function () {
