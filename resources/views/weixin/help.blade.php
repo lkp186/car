@@ -8,7 +8,7 @@
 <div class="row" align="center">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img src="{{asset('public/weixin/image/1.jpg')}}" alt="">
+            <img src="{{asset('public/weixin/image/nilu.jpg')}}" alt="">
             <div class="caption">
                 <h3>Thumbnail label</h3>
                 <p>...</p>
