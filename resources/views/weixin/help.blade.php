@@ -1,17 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron" style="background-color: pink">
-            <h1 style="font-family: 微软雅黑;text-align: center;">新人指引</h1>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="{{'public/weixin/image/1.jpg'}}" alt="">
+            <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>...</p>
+            </div>
         </div>
     </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="{{'public/weixin/image/2.jpg'}}" alt="">
+            <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="{{'public/weixin/image/3.jpg'}}" alt="">
+            <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
-
-
