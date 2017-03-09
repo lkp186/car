@@ -77,7 +77,7 @@ class wechatCallbackapiTest
                 $content.=$attr['result']['addressComponent']['district'].'_';
                 $content.=$attr['result']['addressComponent']['street'];
                 //将每一次用户进入会话时的位置存入数据库
-                $this->http_request("http://b8107.cn/saveLocation?OpenID=$OpenID&content=$content");
+                $this->http_request("http://b8107.cn/weiChat/saveLocation?OpenID=$OpenID&content=$content");
                 break;
             case 'CLICK':
                 switch ($obj->EventKey){
@@ -92,7 +92,7 @@ class wechatCallbackapiTest
                             "Title" =>"新人指引",
                             "Description" =>"share-car带你走入不一样的世界",
                             "PicUrl" =>"http://b8107.cn/public/weixin/ss.jpg",
-                            "Url" =>"http://b8107.cn/help"
+                            "Url" =>"http://b8107.cn/weiChat/help"
                         );
                         $result=$this->transNews($obj,$content);
                         break;
@@ -113,7 +113,7 @@ class wechatCallbackapiTest
                         $content="这是客服接口";$result=$this->transText($obj,$content);break;
                     case '位置':
                         $OpenID=$obj->FromUserName;
-                        $url="http://b8107.cn/location?OpenID=$OpenID";
+                        $url="http://b8107.cn/weiChat/location?OpenID=$OpenID";
                         $json=$this->http_request($url);
                         $attr=json_decode($json,true);
                         if($attr['error']==0){
@@ -226,7 +226,7 @@ $item_str
                 'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
             $result=$this->transMusic($obj,$content);
         }elseif (strstr($keyword,'天气')){
-            $url="http://b8107.cn/weather?city=".mb_substr($keyword,2,10,"utf-8");
+            $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
             $json=$this->http_request($url);
             $attr=json_decode($json,true);
             if(empty($attr)){

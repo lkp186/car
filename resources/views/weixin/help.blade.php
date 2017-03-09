@@ -7,9 +7,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h2>这是新人指引</h2>
+        <div class="jumbotron" style="background-color: pink">
+            <h1 style="font-family: 微软雅黑;text-align: center;">新人指引</h1>
         </div>
     </div>
 </body>
 </html>
+
+

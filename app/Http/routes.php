@@ -147,7 +147,7 @@ Route::group(['middleware' => ['web','admin'],'prefix'=>'admin','namespace'=>'Ad
 });
 
 //微信公众号部分的路由
-Route::group(['middleware'=>'web','namespace'=>'WeChat'],function (){
+Route::group(['middleware'=>'web','prefix'=>'weiChat','namespace'=>'WeChat'],function (){
     Route::get('custom/service','CustomServiceController@index');//客服接口
     Route::get('weather','WeatherController@index');//查询天气
     Route::get('location','LocationController@index');//用户位置
