@@ -4,7 +4,7 @@
     <title></title>
 </head>
 <body>
-<div class="row">
+<div class="row" align="center">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
             <img src="{{asset('public/weixin/image/1.jpg')}}" alt="">
