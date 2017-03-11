@@ -123,8 +123,10 @@ class wechatCallbackapiTest
                         }
                         $result=$this->transText($obj,$content);
                         break;
-                    case '地图导航':$content="请通过微信发送当前位置给我们，即可进行导航";
-                    break;
+                    case '地图导航':
+                        $content="请通过微信发送当前位置给我们，即可进行导航";
+                        $result=$this->transText($obj,$content);
+                        break;
                     default:
                         //假如用户没有开启获取地理位置的权限则会执行该操作，删除数据库中用户的地理位置
                         $content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
