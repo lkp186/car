@@ -109,29 +109,6 @@ class wechatCallbackapiTest
                     case 'weather':$content="请发送天气+城市名来查询天气例如：\n天气无锡";
                         $result=$this->transText($obj,$content);
                         break;
-                    case 'custom_service':
-                        $staffs=array('oq7mZw5JPoFoETIoL0GYr2mfnPF0');
-                        $from = strval($obj->FromUserName);
-                        $mmc=memcache_init();
-                        //判断是否是客服所点击
-                        if(in_array($from,$staffs)){
-                            $this->send_custom_msg($from, "text", "你已结束本次对话！");
-                            $relation = json_decode(memcache_get($mmc, "service"), true);
-                            $to = $relation['from'];
-                            $this->send_custom_msg($from, "text", "你已结束本次对话！");
-                            $this->send_custom_msg($to, "text", "感谢您的咨询。期待下次再会！");
-                            memcache_delete($mmc,"service");
-
-                        }else{
-                            $to = $staffs[0];
-                            memcache_set($mmc, "service", '{"from":"'.$from.'","to":"'.$to.'"}');
-                            $this->send_custom_msg($from, "text", "正在为您接入客服，请稍候...");
-                            $this->send_custom_msg($to, "text", "有用户请求接入，请响应！");
-                        }
-
-
-
-                        $content="这是客服接口".$obj->FromUserName;$result=$this->transText($obj,$content);break;
                     case '位置':
                         $OpenID=$obj->FromUserName;
                         $url="http://b8107.cn/weiChat/location?OpenID=$OpenID";
@@ -441,20 +418,6 @@ $item_str
         curl_close($curl);
         return $output;
 
-    }
-
-
-
-    //发送客服消息
-    public function send_custom_msg($to_user,$type,$content){
-        $msg=array('toUser'=>$to_user);
-        switch ($type){
-            case 'text':
-                $msg['msgtype'] = 'text';
-                $msg['text']    = array('content'=> urlencode($content));break;
-        }
-        $url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=".$this->get_access_token();
-        return $this->http_request($url, urldecode(json_encode($msg)));
     }
 
 }
