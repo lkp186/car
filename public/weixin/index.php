@@ -115,6 +115,7 @@ class wechatCallbackapiTest
                         $mmc=memcache_init();
                         //判断是否是客服所点击
                         if(in_array($from,$staffs)){
+                            $this->send_custom_msg($from, "text", "你已结束本次对话！");
                             $relation = json_decode(memcache_get($mmc, "service"), true);
                             $to = $relation['from'];
                             $this->send_custom_msg($from, "text", "你已结束本次对话！");
