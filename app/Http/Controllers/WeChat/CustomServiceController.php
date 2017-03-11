@@ -18,6 +18,17 @@ class CustomServiceController extends Controller
         $attr=json_decode($json,true);
         return $attr['access_token'];
     }
+    //发送客服消息
+    public function send_custom_msg($to_user,$type,$content){
+        $msg=array('toUser'=>$to_user);
+        switch ($type){
+            case 'text':
+                $msg['msgtype'] = 'text';
+                $msg['text']    = array('content'=> urlencode($content));break;
+        }
+        $url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=".$this->get_access_token();
+        return $this->https_request($url, urldecode(json_encode($msg)));
+    }
 
     //curl
     public function http_request($url,$data=null){

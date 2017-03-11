@@ -110,7 +110,7 @@ class wechatCallbackapiTest
                         $result=$this->transText($obj,$content);
                         break;
                     case 'custom_service':
-                        $content="这是客服接口";$result=$this->transText($obj,$content);break;
+                        $content="这是客服接口".$obj->FromUserName;$result=$this->transText($obj,$content);break;
                     case '位置':
                         $OpenID=$obj->FromUserName;
                         $url="http://b8107.cn/weiChat/location?OpenID=$OpenID";
