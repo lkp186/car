@@ -63,7 +63,7 @@ $json_menu='
            {
                "type":"view",
                "name":"网点分布",
-               "url":"http://b8107.cn/location"
+               "url":"http://b8107.cn/weiChat/netStations"
            },
            {
                "type":"view",
