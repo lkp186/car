@@ -69,7 +69,13 @@ $json_menu='
                "type":"view",
                "name":"订单查询",
                "url":"http://b8107.cn/weiChat/searchOrder"
+           },
+           {
+               "type":"click",
+               "name":"地图导航",
+               "key":"地图导航"
            }
+           
            ]
      },
      {
