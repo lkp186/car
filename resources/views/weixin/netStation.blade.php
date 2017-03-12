@@ -8,7 +8,9 @@
     </script>
 </head>
 <body>
-<div id="allmap" style="position:fixed;;width:1900px; height:880px;margin-top: -20px;"></div>
+<div class="col-xs-12">
+    <div id="allmap" style="position:fixed;;width:auto; height:auto;"></div>
+</div>
 <script type="text/javascript">
     map = new BMap.Map("allmap");
 
