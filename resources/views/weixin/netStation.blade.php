@@ -10,7 +10,7 @@
 <body>
 <div class="row">
     <div class="col-xs-12">
-        <div id="allmap" style="position:fixed;;width:auto; height:auto;"></div>
+        <div id="allmap" style="position:relative;;width:300px; height:300px;"></div>
     </div>
 </div>
 <script type="text/javascript">
