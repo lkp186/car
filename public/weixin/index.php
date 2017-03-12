@@ -231,16 +231,15 @@ $item_str
             $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
             $json=$this->http_request($url);
             $array=json_decode($json,true);
-            $name=$array['results'][0]['daily'][0]['low'];
             if(empty($array)){
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
             }else{
-//                $weatherArray[] = array(
-//                    "Title" =>$city."天气预报",
-//                    "Description" =>"",
-//                    "PicUrl" =>"",
-//                    "Url" =>"");
+                $weatherArray[] = array(
+                    "Title" =>$array['results'][0]["location"]['name']."天气预报",
+                    "Description" =>"",
+                    "PicUrl" =>"http://b8107.cn/public/weixin/image/coser.jpg",
+                    "Url" =>"");
                 for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
                     $img=$array['results'][0]['daily'][$i]['code_day'];
                     $weatherArray[] = array(
