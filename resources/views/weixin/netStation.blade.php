@@ -2,6 +2,10 @@
 <head>
     <title>网点分布</title>
     <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=AoKIGVeahxDWHLgQYt9LnGGqG2xqCG5i">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+        //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+    </script>
 </head>
 <body>
 <div class="row">
