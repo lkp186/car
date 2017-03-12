@@ -11,7 +11,7 @@
 <div class="jumbotron" style="text-align: center;"><h2 style="font-family: 微软雅黑">Share-Car网点分布</h2></div>
 <div class="row" style="margin-top: -30px;">
     <div class="col-xs-12">
-        <div id="allmap" style="position:relative;;width:100%; height:100%;"></div>
+        <div id="allmap" style="position:relative;width:100%; height:100%;"></div>
     </div>
 </div>
 <script type="text/javascript">
