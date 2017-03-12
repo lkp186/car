@@ -230,7 +230,7 @@ $item_str
         }elseif (strstr($keyword,'天气')){
             $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
             $json=$this->http_request($url);
-            $attr=json_decode($json,true);
+            $attr=urldecode(json_decode($json,true));
             if(empty($attr)){
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
