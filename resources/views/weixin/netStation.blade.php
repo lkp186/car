@@ -7,7 +7,7 @@
 <body>
 <div class="row">
     <div class="col-md-12 col-sm-6">
-        <div id="allmap" style="width: auto;height: auto"></div>
+        <div id="allmap" style="width: 100px;height: 300px"></div>
     </div>
     <script type="text/javascript">
         map = new BMap.Map("allmap");
@@ -21,7 +21,7 @@
 
         //全景
         var stCtrl = new BMap.PanoramaControl();
-        stCtrl.setOffset(new BMap.Size(130, 0));
+        stCtrl.setOffset(new BMap.Size(60, 0));
         map.addControl(stCtrl);
 
 
@@ -42,8 +42,8 @@
             [119.386203,34.756778,"地址：连云区连云港国际客运站"],
         ];
         var opts = {
-            width : 250,     // 信息窗口宽度
-            height: 80,     // 信息窗口高度
+            width : 100,     // 信息窗口宽度
+            height: 30,     // 信息窗口高度
             title : '<h4 style="color: green">'+"取车点"+'</h4>' , // 信息窗口标题
             enableMessage:true//设置允许信息窗发送短息
         };
