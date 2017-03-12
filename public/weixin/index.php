@@ -246,8 +246,8 @@ $item_str
                         "Title"=>$array['results'][0]['daily'][$i]['date']."\t".$array['results'][0]['daily'][$i]['text_day']
                             ."\n最高温度：\t".$array['results'][0]['daily'][$i]['high']."℃ "
                             ."\t最低温度：\t".$array['results'][0]['daily'][$i]['low']."℃ "
-                            ."风向：".$array['results'][0]['daily'][$i]['wind_direction']
-                            ."风力：".$array['results'][0]['daily'][$i]['wind_scale'],
+                            ."风向：".$array['results'][0]['daily'][$i]['wind_direction']."\t"
+                            ."\t风力：".$array['results'][0]['daily'][$i]['wind_scale'].'级',
                         "Description"=>"",
                         "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
                         "Url" =>""
