@@ -8,8 +8,10 @@
     </script>
 </head>
 <body>
-<div class="col-xs-12">
-    <div id="allmap" style="position:fixed;;width:auto; height:auto;"></div>
+<div class="row">
+    <div class="col-xs-12">
+        <div id="allmap" style="position:fixed;;width:auto; height:auto;"></div>
+    </div>
 </div>
 <script type="text/javascript">
     map = new BMap.Map("allmap");
