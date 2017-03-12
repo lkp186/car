@@ -6,7 +6,6 @@
         //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
     </script>
 @endsection
-@section('content')
     <div id="allmap" ></div>
     <script type="text/javascript">
         map = new BMap.Map("allmap");
@@ -65,13 +64,6 @@
             map.openInfoWindow(infoWindow,point); //开启信息窗口
         }
     </script>
-
-@endsection
-
-
-
-
-
 @section('script')
 
 @endsection
