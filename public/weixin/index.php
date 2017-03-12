@@ -230,6 +230,8 @@ $item_str
         }elseif (strstr($keyword,'天气')){
             $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
             $json=$this->http_request($url);
+            $content="呵呵";
+
             $attr=json_decode($json,true);
             if(empty($attr)){
                 $content="没有结果啊";
@@ -256,6 +258,7 @@ $item_str
                 }
                 $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
+            $result=$this->transText($obj,$content);
         }else{
             $content="共享汽车-技术总监 刘康平 编写";
         }
