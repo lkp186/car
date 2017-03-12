@@ -234,7 +234,7 @@ $item_str
             $url="https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=$city&language=zh-Hans&unit=c&start=0&days=3";
             $json=$this->http_request($url);
             $array=json_decode($json,true);
-            $name=$array['results'][0]['daily'][0]['date'];
+            $name=$array['results'][0]['daily'][0]['low'];
             if(empty($array)){
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
@@ -243,7 +243,7 @@ $item_str
                 $weatherArray[] = array(
                     "Title" =>$city."天气预报",
                     "Description" =>"",
-                    "PicUrl" =>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488805179719&di=2433fad01a1c315a33e71441337424bf&imgtype=0&src=http%3A%2F%2Fimage79.360doc.com%2FDownloadImg%2F2014%2F11%2F2510%2F47439658_27.jpg",
+                    "PicUrl" =>"",
                     "Url" =>"");
                 for ($i = 0; $i < count($weather["daily"]); $i++) {
                     $img=$weather['daily'][$i]['code_day'];
@@ -258,7 +258,7 @@ $item_str
                         "Url" =>""
                     );
                 }
-                $content=$weatherArray;$result=$this->transText($obj,$content);
+                $content='城市名'.$name;$result=$this->transText($obj,$content);
             }
 
         }else{
