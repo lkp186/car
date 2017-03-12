@@ -256,7 +256,7 @@ $item_str
                         "Url" =>""
                     );
                 }
-                $content=$weatherArray;$result=$this->transNews($obj,$content);
+                $content=$attr['results'][0]['location']['name'];$result=$this->transText($obj,$content);
             }
 
         }else{
