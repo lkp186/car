@@ -233,9 +233,9 @@ $item_str
             $city=urlencode('无锡');
             $url="https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=$city&language=zh-Hans&unit=c&start=0&days=3";
             $json=$this->http_request($url);
-            $array=json_decode($json);
-
-            $content='城市名';$result=$this->transText($obj,$content);
+            $array=json_decode($json,true);
+            $name=$array['results'][0]['location']['name'];
+            $content='城市名'.$name;$result=$this->transText($obj,$content);
 //            if(empty($array)){
 //                $content="没有结果啊";
 //                $result=$this->transText($obj,$content);
