@@ -15,7 +15,7 @@ function http_request($url,$data=null){
     return $output;
 
 }
-$city=urlencode('上海');
+$city=urlencode('无锡');
 $url="https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=$city&language=zh-Hans&unit=c&start=0&days=3";
 
 $json=http_request($url);

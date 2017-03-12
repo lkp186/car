@@ -232,7 +232,7 @@ $item_str
 //            $json=$this->http_request($url);
             $url ="https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=上海&language=zh-Hans&unit=c&start=0&days=5";
             $json=$this->http_request($url);
-            $attr=urldecode(json_decode($json,true));
+            $attr=json_decode($json,true);
             if(empty($attr)){
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
