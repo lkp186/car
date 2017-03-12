@@ -154,7 +154,7 @@ Route::group(['middleware'=>'web','prefix'=>'weiChat','namespace'=>'WeChat'],fun
     Route::get('help','CommonController@help');//新人指引
     Route::get('searchOrder','CommonController@searchOrder');//订单查询
     Route::post('searchOrder/result','CommonController@searchResult');//展示查询结果
-    Route::get('netStations','NetStationController@netStation');
+    Route::get('netStations','NetStationController@netStation');//网点分布
 });
 
 
