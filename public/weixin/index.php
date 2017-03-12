@@ -235,33 +235,31 @@ $item_str
             $json=$this->http_request($url);
             $array=json_decode($json,true);
             $name=$array['results'][0]['daily'][0]['date'];
-            $content='城市名'.$name;$result=$this->transText($obj,$content);
-//            if(empty($array)){
-//                $content="没有结果啊";
-//                $result=$this->transText($obj,$content);
-//            }else{
-//                $weather=$attr['results'][0];
-//                $weatherArray[] = array(
-//                    "Title" =>$weather['location']['name']."天气预报",
-//                    "Description" =>"",
-//                    "PicUrl" =>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488805179719&di=2433fad01a1c315a33e71441337424bf&imgtype=0&src=http%3A%2F%2Fimage79.360doc.com%2FDownloadImg%2F2014%2F11%2F2510%2F47439658_27.jpg",
-//                    "Url" =>"");
-//                for ($i = 0; $i < count($weather["daily"]); $i++) {
-//                    $img=$weather['daily'][$i]['code_day'];
-//                    $weatherArray[] = array(
-//                        "Title"=>$weather['daily'][$i]['date']."\n".$weather['daily'][$i]['text_day']
-//                            ."\t最高温度：\t".$weather['daily'][$i]['high']."℃ "
-//                            ."\t最低温度：\t".$weather['daily'][$i]['low']."℃ "
-//                            ."风向：".$weather['daily'][$i]['wind_direction']
-//                            ."风力：".$weather['daily'][$i]['wind_scale'],
-//                        "Description"=>"",
-//                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
-//                        "Url" =>""
-//                    );
-//                }
-//                $name=$array['results'][0]['location']['name'];
-//                $content='城市名'.$name;$result=$this->transText($obj,$content);
-//            }
+            if(empty($array)){
+                $content="没有结果啊";
+                $result=$this->transText($obj,$content);
+            }else{
+                $weather=$array['results'][0];
+                $weatherArray[] = array(
+                    "Title" =>$city."天气预报",
+                    "Description" =>"",
+                    "PicUrl" =>"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488805179719&di=2433fad01a1c315a33e71441337424bf&imgtype=0&src=http%3A%2F%2Fimage79.360doc.com%2FDownloadImg%2F2014%2F11%2F2510%2F47439658_27.jpg",
+                    "Url" =>"");
+                for ($i = 0; $i < count($weather["daily"]); $i++) {
+                    $img=$weather['daily'][$i]['code_day'];
+                    $weatherArray[] = array(
+                        "Title"=>$weather['daily'][$i]['date']."\n".$weather['daily'][$i]['text_day']
+                            ."\t最高温度：\t".$weather['daily'][$i]['high']."℃ "
+                            ."\t最低温度：\t".$weather['daily'][$i]['low']."℃ "
+                            ."风向：".$weather['daily'][$i]['wind_direction']
+                            ."风力：".$weather['daily'][$i]['wind_scale'],
+                        "Description"=>"",
+                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
+                        "Url" =>""
+                    );
+                }
+                $content=$weatherArray;$result=$this->transText($obj,$content);
+            }
 
         }else{
             $content="共享汽车-技术总监 刘康平 编写";
