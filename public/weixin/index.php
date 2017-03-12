@@ -228,7 +228,9 @@ $item_str
                 'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
             $result=$this->transMusic($obj,$content);
         }elseif (strstr($keyword,'天气')){
-            $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
+//            $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
+//            $json=$this->http_request($url);
+            $url ="https://api.thinkpage.cn/v3/weather/daily.json?key=otkz6bh0xu4za9a3&location=上海&language=zh-Hans&unit=c&start=0&days=5";
             $json=$this->http_request($url);
             $attr=urldecode(json_decode($json,true));
             if(empty($attr)){
