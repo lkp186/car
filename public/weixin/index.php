@@ -254,7 +254,9 @@ $item_str
                         "Url" =>""
                     );
                 }
-                $content=$weatherArray;$result=$this->transNews($obj,$content);
+                $content="等待返回值".$weather['daily'][$i]['low'];
+                $result=$this->transText($obj,$content);
+//                $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
 
         }else{
