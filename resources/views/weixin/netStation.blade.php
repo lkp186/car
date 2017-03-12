@@ -1,12 +1,14 @@
-@extends('layouts.common')
-@section('title')
+<html>
+<head>
     <title>网点分布</title>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=AoKIGVeahxDWHLgQYt9LnGGqG2xqCG5i">
-        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
-        //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
-    </script>
-@endsection
-    <div id="allmap" ></div>
+    <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
+
+</head>
+<body>
+<div class="row">
+    <div class="col-md-12 col-sm-6">
+        <div id="allmap" style="width: auto;height: auto"></div>
+    </div>
     <script type="text/javascript">
         map = new BMap.Map("allmap");
 
@@ -64,6 +66,7 @@
             map.openInfoWindow(infoWindow,point); //开启信息窗口
         }
     </script>
-@section('script')
+</div>
+</body>
 
-@endsection
+</html>
