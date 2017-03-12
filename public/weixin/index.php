@@ -239,24 +239,24 @@ $item_str
                 $content="没有结果啊";
                 $result=$this->transText($obj,$content);
             }else{
-                $weatherArray[] = array(
-                    "Title" =>$city."天气预报",
-                    "Description" =>"",
-                    "PicUrl" =>"",
-                    "Url" =>"");
-//                for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
-//                    $img=$array['results'][0]['daily'][$i]['code_day'];
-//                    $weatherArray[] = array(
-//                        "Title"=>$array['results'][0]['daily'][$i]['date']."\n".$array['results'][0]['daily'][$i]['text_day']
-//                            ."\t最高温度：\t".$array['results'][0]['daily'][$i]['high']."℃ "
-//                            ."\t最低温度：\t".$array['results'][0]['daily'][$i]['low']."℃ "
-//                            ."风向：".$array['results'][0]['daily'][$i]['wind_direction']
-//                            ."风力：".$array['results'][0]['daily'][$i]['wind_scale'],
-//                        "Description"=>"",
-//                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
-//                        "Url" =>""
-//                    );
-//                }
+//                $weatherArray[] = array(
+//                    "Title" =>$city."天气预报",
+//                    "Description" =>"",
+//                    "PicUrl" =>"",
+//                    "Url" =>"");
+                for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
+                    $img=$array['results'][0]['daily'][$i]['code_day'];
+                    $weatherArray[] = array(
+                        "Title"=>$array['results'][0]['daily'][$i]['date']."\n".$array['results'][0]['daily'][$i]['text_day']
+                            ."\t最高温度：\t".$array['results'][0]['daily'][$i]['high']."℃ "
+                            ."\t最低温度：\t".$array['results'][0]['daily'][$i]['low']."℃ "
+                            ."风向：".$array['results'][0]['daily'][$i]['wind_direction']
+                            ."风力：".$array['results'][0]['daily'][$i]['wind_scale'],
+                        "Description"=>"",
+                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
+                        "Url" =>""
+                    );
+                }
                 $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
 
