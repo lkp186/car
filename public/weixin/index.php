@@ -235,7 +235,7 @@ $item_str
             $json=http_request($url);
             $array=json_decode($json,true);
             $name=$array['results'][0]['location']['name'];
-            $content='城市名'.$name;$result=$this->transText($obj,$content);
+            $content='城市名';$result=$this->transText($obj,$content);
 //            if(empty($array)){
 //                $content="没有结果啊";
 //                $result=$this->transText($obj,$content);
