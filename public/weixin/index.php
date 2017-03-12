@@ -258,7 +258,7 @@ $item_str
                         "Url" =>""
                     );
                 }
-                $content='城市名'.$name;$result=$this->transText($obj,$content);
+                $content=$weatherArray;$result=$this->transNews($obj,$content);
             }
 
         }else{
