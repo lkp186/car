@@ -210,33 +210,38 @@ $item_str
     public function receiveText($obj){
         $keyword=trim($obj->Content);
        if (strstr($keyword,'天气')){
-            $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
-            $json=$this->http_request($url);
-            $array=json_decode($json,true);
-            if(empty($array)){
-                $content="没有结果啊";
-                $result=$this->transText($obj,$content);
-            }else{
-                $weatherArray[] = array(
-                    "Title" =>$array['results'][0]["location"]['name']."天气预报",
-                    "Description" =>"",
-                    "PicUrl" =>"http://b8107.cn/public/weixin/image/coser.jpg",
-                    "Url" =>"");
-                for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
-                    $img=$array['results'][0]['daily'][$i]['code_day'];
+            if(!empty(mb_substr($keyword,2,10,"utf-8"))){
+                $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
+                $json=$this->http_request($url);
+                $array=json_decode($json,true);
+                if(empty($array)){
+                    $content="没有结果啊";
+                    $result=$this->transText($obj,$content);
+                }else{
                     $weatherArray[] = array(
-                        "Title"=>$array['results'][0]['daily'][$i]['date']."\t".$array['results'][0]['daily'][$i]['text_day']
-                            ."\n最高温度：\t".$array['results'][0]['daily'][$i]['high']."℃ "
-                            ."\t最低温度：\t".$array['results'][0]['daily'][$i]['low']."℃ "
-                            ."风向：".$array['results'][0]['daily'][$i]['wind_direction']."\t"
-                            ."\t风力：".$array['results'][0]['daily'][$i]['wind_scale'].'级',
-                        "Description"=>"",
-                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
-                        "Url" =>""
-                    );
+                        "Title" =>$array['results'][0]["location"]['name']."天气预报",
+                        "Description" =>"",
+                        "PicUrl" =>"http://b8107.cn/public/weixin/image/coser.jpg",
+                        "Url" =>"");
+                    for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
+                        $img=$array['results'][0]['daily'][$i]['code_day'];
+                        $weatherArray[] = array(
+                            "Title"=>$array['results'][0]['daily'][$i]['date']."\t".$array['results'][0]['daily'][$i]['text_day']
+                                ."\n最高温度：\t".$array['results'][0]['daily'][$i]['high']."℃ "
+                                ."\t最低温度：\t".$array['results'][0]['daily'][$i]['low']."℃ "
+                                ."风向：".$array['results'][0]['daily'][$i]['wind_direction']."\t"
+                                ."\t风力：".$array['results'][0]['daily'][$i]['wind_scale'].'级',
+                            "Description"=>"",
+                            "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
+                            "Url" =>""
+                        );
+                    }
+                    $content=$weatherArray;
+                    $result=$this->transNews($obj,$content);
                 }
-                $content=$weatherArray;
-                $result=$this->transNews($obj,$content);
+            }else{
+                $content="注意，查询天气的城市名称不能为空哦";
+                $result=$this->transText($obj,$content);
             }
         } else {
            $content = $this->getXi($obj->FromUserName, $keyword);
