@@ -209,67 +209,70 @@ $item_str
     //接收文本消息的函数
     public function receiveText($obj){
         $keyword=trim($obj->Content);
-        if(strstr($keyword,'文本')){
-            $content="这是一个文本消息";
-        }elseif (strstr($keyword,'单图文')){
-            $content=array();
-            $content[]=array('Title'=>'标题1',"Description"=>'描述1',
-                "PicUrl"=>"http://img3.duitang.com/uploads/item/201602/21/20160221021642_2sVXm.thumb.700_0.jpeg",
-                "Url"=>'http://www.weixinsucai.com/zhichangren/00032614');
-        }elseif(strstr($keyword,'图文') || strstr($keyword,'多图文')){
-            $content[]=array('Title'=>'标题1',"Description"=>'描述1',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
-            $content[]=array('Title'=>'标题2',"Description"=>'描述2',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
-            $content[]=array('Title'=>'标题3',"Description"=>'描述3',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
-            $content[]=array('Title'=>'标题4',"Description"=>'描述4',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
+        $content = $this->getXi($obj->FromUserName, $keyword);
+        $result = $this->transText($obj, $content);
 
-        }elseif (strstr($keyword,'音乐')){
-            $content=array("Title"=>'FSN','Description'=>'超燃',
-                'MusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
-                'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
-            $result=$this->transMusic($obj,$content);
-        }elseif (strstr($keyword,'天气')){
-            $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
-            $json=$this->http_request($url);
-            $array=json_decode($json,true);
-            if(empty($array)){
-                $content="没有结果啊";
-                $result=$this->transText($obj,$content);
-            }else{
-                $weatherArray[] = array(
-                    "Title" =>$array['results'][0]["location"]['name']."天气预报",
-                    "Description" =>"",
-                    "PicUrl" =>"http://b8107.cn/public/weixin/image/coser.jpg",
-                    "Url" =>"");
-                for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
-                    $img=$array['results'][0]['daily'][$i]['code_day'];
-                    $weatherArray[] = array(
-                        "Title"=>$array['results'][0]['daily'][$i]['date']."\t".$array['results'][0]['daily'][$i]['text_day']
-                            ."\n最高温度：\t".$array['results'][0]['daily'][$i]['high']."℃ "
-                            ."\t最低温度：\t".$array['results'][0]['daily'][$i]['low']."℃ "
-                            ."风向：".$array['results'][0]['daily'][$i]['wind_direction']."\t"
-                            ."\t风力：".$array['results'][0]['daily'][$i]['wind_scale'].'级',
-                        "Description"=>"",
-                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
-                        "Url" =>""
-                    );
-                }
-                $content=$weatherArray;$result=$this->transNews($obj,$content);
-            }
-
-        }else{
-            $content="共享汽车-技术总监 刘康平 编写";
-        }
-
-        if(is_array($content)){
-            if (isset($content[0]['PicUrl'])){
-                $result=$this->transNews($obj,$content);
-            }else if (isset($content['Music'])){
-                $result = $this->transMusic($obj, $content);
-            }
-
-        }else{
-            $result=$this->transText($obj,$content);
-        }
+//        if(strstr($keyword,'文本')){
+//            $content="这是一个文本消息";
+//        }elseif (strstr($keyword,'单图文')){
+//            $content=array();
+//            $content[]=array('Title'=>'标题1',"Description"=>'描述1',
+//                "PicUrl"=>"http://img3.duitang.com/uploads/item/201602/21/20160221021642_2sVXm.thumb.700_0.jpeg",
+//                "Url"=>'http://www.weixinsucai.com/zhichangren/00032614');
+//        }elseif(strstr($keyword,'图文') || strstr($keyword,'多图文')){
+//            $content[]=array('Title'=>'标题1',"Description"=>'描述1',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
+//            $content[]=array('Title'=>'标题2',"Description"=>'描述2',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
+//            $content[]=array('Title'=>'标题3',"Description"=>'描述3',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
+//            $content[]=array('Title'=>'标题4',"Description"=>'描述4',"PicUrl"=>"http://i0.hdslb.com/group1/M00/5F/F0/oYYBAFbVlPSACHJtAAIulgLE3S8670.jpg","Url"=>'http://www.weixinsucai.com/zhichangren/00030690');
+//
+//        }elseif (strstr($keyword,'音乐')){
+//            $content=array("Title"=>'FSN','Description'=>'超燃',
+//                'MusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
+//                'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
+//            $result=$this->transMusic($obj,$content);
+//        }elseif (strstr($keyword,'天气')){
+//            $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
+//            $json=$this->http_request($url);
+//            $array=json_decode($json,true);
+//            if(empty($array)){
+//                $content="没有结果啊";
+//                $result=$this->transText($obj,$content);
+//            }else{
+//                $weatherArray[] = array(
+//                    "Title" =>$array['results'][0]["location"]['name']."天气预报",
+//                    "Description" =>"",
+//                    "PicUrl" =>"http://b8107.cn/public/weixin/image/coser.jpg",
+//                    "Url" =>"");
+//                for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
+//                    $img=$array['results'][0]['daily'][$i]['code_day'];
+//                    $weatherArray[] = array(
+//                        "Title"=>$array['results'][0]['daily'][$i]['date']."\t".$array['results'][0]['daily'][$i]['text_day']
+//                            ."\n最高温度：\t".$array['results'][0]['daily'][$i]['high']."℃ "
+//                            ."\t最低温度：\t".$array['results'][0]['daily'][$i]['low']."℃ "
+//                            ."风向：".$array['results'][0]['daily'][$i]['wind_direction']."\t"
+//                            ."\t风力：".$array['results'][0]['daily'][$i]['wind_scale'].'级',
+//                        "Description"=>"",
+//                        "PicUrl"=>"http://b8107.cn/public/weixin/weather/$img.png",
+//                        "Url" =>""
+//                    );
+//                }
+//                $content=$weatherArray;$result=$this->transNews($obj,$content);
+//            }
+//
+//        }else{
+//            $content="共享汽车-技术总监 刘康平 编写";
+//        }
+//
+//        if(is_array($content)){
+//            if (isset($content[0]['PicUrl'])){
+//                $result=$this->transNews($obj,$content);
+//            }else if (isset($content['Music'])){
+//                $result = $this->transMusic($obj, $content);
+//            }
+//
+//        }else{
+//            $result=$this->transText($obj,$content);
+//        }
         return $result;
     }
 
@@ -419,6 +422,39 @@ $item_str
         return $output;
 
     }
+
+    //机器人
+    public function getXi($openid,$content){
+        $app_key="GSlmLufQCebP";
+        $app_secret="Awn4wz2kkyFSTd7KXyaR";
+        //签名算法
+        $realm = "xiaoi.com";
+        $method = "POST";
+        $uri = "/robot/ask.do";
+        $nonce = "";
+        $chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+        for ($i = 0; $i < 40; $i++) {
+            $nonce .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+        }
+        $HA1 = sha1($app_key.":".$realm.":".$app_secret);
+        $HA2 = sha1($method.":".$uri);
+        $sign = sha1($HA1.":".$nonce.":".$HA2);
+
+        //接口调用
+        $url = "http://nlp.xiaoi.com/robot/ask.do";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-Auth:    app_key="'.$app_key.'", nonce="'.$nonce.'", signature="'.$sign.'"'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "question=".urlencode($content)."&userId=".$openid."&platform=custom&type=0");
+        $output = curl_exec($ch);
+        if ($output === FALSE){
+            return "cURL Error: ". curl_error($ch);
+        }
+        return trim($output);
+    }
+
 
 }
 
