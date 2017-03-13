@@ -238,7 +238,7 @@ $item_str
                 $content=$weatherArray;
                 $result=$this->transNews($obj,$content);
             }
-        }else{
+        } else {
            $content = $this->getXi($obj->FromUserName, $keyword);
            $result = $this->transText($obj, $content);
         }
