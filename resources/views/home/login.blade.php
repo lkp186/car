@@ -152,7 +152,7 @@
                             sweetAlert("用户名或密码不正确!", "", "error");
                         }else {
                             sweetAlert("登录成功！", "", "success");
-                            setTimeout("javascript:location.href=\'http://localhost/car/home\'", 2000);
+                            setTimeout("javascript:location.href=\'http://115.159.43.143/car/home\'", 2000);
                         }
                     }
                 });

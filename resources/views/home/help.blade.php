@@ -85,7 +85,7 @@
 <script type="text/javascript">
     $(function () {
         $('.buttonFinish').click(function () {
-            setTimeout("javascript:location.href='http://localhost/car/home/login'", 11);
+            setTimeout("javascript:location.href='http://115.159.43.143/car/home/login'", 11);
         });
     });
 </script>
