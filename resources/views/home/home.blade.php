@@ -14,7 +14,7 @@
 
 {{--个人中心和管理员入口--}}
 @section('admin-login')
-    <div  style="margin-left: 90%">
+    <div  style="text-align: right;">
         @if(Session::get('username'))
             <a href="{{url('home/personal')}}" role="button" style=" text-decoration: none;"><span class="label label-warning">个人中心</span></a>&nbsp;&nbsp;
             <a href="{{url('admin/login')}}" role="button" style=" text-decoration: none;"><span class="label label-danger">管理员入口</span></a>

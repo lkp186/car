@@ -43,7 +43,7 @@
         </div>
     </nav>
 </div>
-<div id="wizard" class="swMain" style="margin-top: 6%;wid">
+<div id="wizard" class="swMain" style="margin-top: 6%;">
     <ul>
         <li><a href="#step-1"><span class="stepNumber">1</span><span class="stepDesc">用户注册<br /></span></a></li>
         <li><a href="#step-2"><span class="stepNumber">2</span><span class="stepDesc">资格审核<br /></span></a></li>

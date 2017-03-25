@@ -8,7 +8,7 @@
 @endsection
 @section('admin-login')
     @if(!empty(Session::get('username')))
-        <div  style="margin-left: 85%">
+        <div  style="text-align: right">
             <a  role="button" style=" text-decoration: none;">
                 <span class="label label-warning">您好！</span>
             </a>&nbsp;&nbsp;
