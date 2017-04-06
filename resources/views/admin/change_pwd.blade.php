@@ -18,7 +18,7 @@
                 </label>
                 @if(isset($msg))
                     <script type="text/javascript">
-                        setTimeout("javascript:location.href=\'http://localhost/car/admin/logout\'", 2000);
+                        setTimeout(window.location="{{url('admin/logout')}}", 2000);
                     </script>
                 @endif
             </div>
