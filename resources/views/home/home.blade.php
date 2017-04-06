@@ -26,10 +26,10 @@
 @endsection
 
 @section('content')
-    <div >
-        <div id="top"></div>
-    </div>
-    <div class="dowebok" >
+    {{--<div style="height: 50px;">--}}
+        {{--<div id="top"></div>--}}
+    {{--</div>--}}
+    <div class="dowebok" style="padding-top:90px;">
         <ul class="rslides" id="dowebok" >
             @foreach($image as $value)
                 <li><img class="home" src="{{asset($value->image_path)}}" alt=""></li>
@@ -343,7 +343,7 @@
         $(function(){
             $('.home').jqthumb({
                 width: $(window).width(),
-                height: 490,
+                height: 320,
                 after: function(imgObj){
                     imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
                 }

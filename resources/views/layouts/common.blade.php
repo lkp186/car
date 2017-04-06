@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('title')
     <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('public/css/home.css')}}">
     @yield('link')
     <link rel="stylesheet" href="{{asset('public/css/bootstrap-theme.min.css')}}">
+
 </head>
 <body>
 <div id="header">
-    <nav class="navbar " role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header"style="height: 90px;">
                 <a class="navbar-brand-1" style="font-family: 华文隶书;font-size: 6em;margin-top: 20px;text-decoration: none;" href="{{url('home')}}">Share-Car</a>

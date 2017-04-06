@@ -24,9 +24,8 @@
 
 </head>
 <body>
-<img>
 <div id="header" >
-    <nav class="navbar navbar-default " role="navigation" >
+    <nav class="navbar navbar-default navbar-fixed-top " role="navigation" >
         <div class="container-fluid">
             <div class="navbar-header"style="height: 90px;">
                 <a class="navbar-brand-1" style="font-family: 华文隶书;font-size: 6em;margin-top: 20px;text-decoration: none;" href="{{url('home')}}">Share-Car</a>
@@ -43,7 +42,7 @@
         </div>
     </nav>
 </div>
-<div id="wizard" class="swMain" style="margin-top: 6%;">
+<div id="wizard" class="swMain" style="padding-top: 10%;">
     <ul>
         <li><a href="#step-1"><span class="stepNumber">1</span><span class="stepDesc">用户注册<br /></span></a></li>
         <li><a href="#step-2"><span class="stepNumber">2</span><span class="stepDesc">资格审核<br /></span></a></li>

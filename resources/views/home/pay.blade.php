@@ -367,7 +367,7 @@
                         success:function (data) {
                             if(data=='1'){
                                 sweetAlert("支付成功!", "", "success");
-                                setTimeout("javascript:location.href=\'http://115.159.43.143/car/home/personal'", 2000);
+                                setTimeout(window.location.href= "{{url('home/personal')}}", 2000);
                             }else {
                                 sweetAlert("抱歉,未知的错误!", "", "error");
                             }
