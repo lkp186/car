@@ -1,7 +1,8 @@
 /*reset css*/
 *{margin:0;padding:0;list-style:none;border:none;}
 /*main css*/
-.izl-rmenu{position:fixed; left:68.1%; margin-left:532px; bottom:10px; padding-bottom:143px; background:url(../images/r_b.png) 0px bottom no-repeat; z-index:999; }
+/*.izl-rmenu{position:relative; left:68.1%; margin-left:532px; bottom:10px; padding-bottom:143px; background:url(../images/r_b.png) 0px bottom no-repeat; z-index:999; }*/
+.izl-rmenu{position:fixed; padding-left:89%;bottom:5px;z-index:999; }
 .izl-rmenu .btn{width:72px; height:73px; margin-bottom:1px; cursor:pointer; position:relative;}
 .izl-rmenu .btn-qq{background:url(../images/r_qq.png) 0px 0px no-repeat; background-color:#6da9de;}
 .izl-rmenu .btn-qq:hover{background-color:#488bc7;}

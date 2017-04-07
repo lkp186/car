@@ -26,9 +26,6 @@
 @endsection
 
 @section('content')
-    {{--<div style="height: 50px;">--}}
-        {{--<div id="top"></div>--}}
-    {{--</div>--}}
     <div class="dowebok" style="padding-top:90px;">
         <ul class="rslides" id="dowebok" >
             @foreach($image as $value)
@@ -97,6 +94,8 @@
                     </div>
                 </div>
 
+                {{--悬浮窗--}}
+                <div id="top" ></div>
 
                 {{--服务宗旨--}}
                 <div class="col-sm-12 col-md-9">
