@@ -34,8 +34,8 @@
         </div>
     </nav>
 </div>
-<div style="margin-top: -20px;"><img src="{{url('public/image/personal/personal_bg.jpg')}}" style="position: absolute;width: 100%;height: 100%;"></div>
-<div class="row" style="width: 250px;">
+{{--<div style="margin-top: -20px;"><img src="{{url('public/image/personal/personal_bg.jpg')}}" style="position: absolute;width: 100%;height: 100%;"></div>--}}
+<div class="row" style="letter-spacing:8px;width: 300px;margin-top: -20px;">
     @yield('li')
 </div>
 <div class="row" style="width: 60%;position: relative;margin-top: -584px;margin-left: 340px;">

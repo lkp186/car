@@ -3,7 +3,7 @@
     <title>消费记录</title>
 @endsection
 @section('content')
-    <div class="container" style="padding-top:10px;">
+    <div class="container" style="padding-top:110px;">
         <div class="panel panel-default panel-warning" >
             <div class="panel-heading ">
                 <h3 class="panel-title">我的订单</h3>
@@ -15,8 +15,8 @@
                     </div>
                 @else
                     @foreach($order as $value)
-                        <div style="margin:0 auto;background-color: white; border: #5bc0de 1px dashed  ;">
-                            <table class="table" style="font-size: 1.5em;">
+                        <div style="padding-top: 5px;margin:0 auto;background-color: white; border: #5bc0de 1px dashed  ;">
+                            <table class="table" style="font-size: 1.2em;">
                                 <tr class="active" >
                                     <td colspan="5">{{date("Y-m-d H:i:s",$value->order_time)}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         订单编号:&nbsp;&nbsp;{{$value->order_number}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,8 +50,8 @@
     <script >
         $(function(){
             $('.dowebok2').jqthumb({
-                width: 160,
-                height: 160,
+                width: 120,
+                height: 120,
                 after: function(imgObj){
                     imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
                 }

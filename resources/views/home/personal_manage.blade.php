@@ -9,11 +9,11 @@
 
 @section('li')
     <ul class="nav nav-pills nav-stacked" role="tablist" style="font-family: 华文宋体;text-align: center;margin-left: -5px;" >
-        <li  id="t1" role="presentation"><a href="{{url('home/personal')}}" ><h5 id="h1" style="color: snow">个人信息</h5></a></li>
-        <li id="t2" role="presentation" class="active"><a href="{{url('home/personal/manage')}}"><h5 id="h2" style="color: snow">账户管理</h5></a></li>
-        <li id="t3" role="presentation"><a href="{{url('home/user/rules')}}"><h5 id="h3"style="color: snow">用户守则</h5></a></li>
-        <li id="t4" role="presentation"><a href="{{url('home/payRecord')}}"><h5 id="h4"style="color: snow">消费记录</h5></a></li>
-        <li id="t5" role="presentation"><a href="{{url('home/user/comment')}}"><h5 id="h5"style="color: snow">使用反馈</h5></a></li>
+        <li  id="t1" role="presentation"><a href="{{url('home/personal')}}" ><h4 id="h1">个人信息</h4></a></li>
+        <li id="t2" role="presentation" class="active"><a href="{{url('home/personal/manage')}}"><h4 id="h2">账户管理</h4></a></li>
+        <li id="t3" role="presentation"><a href="{{url('home/user/rules')}}"><h4 id="h3">用户守则</h4></a></li>
+        <li id="t4" role="presentation"><a href="{{url('home/payRecord')}}"><h4 id="h4">消费记录</h4></a></li>
+        <li id="t5" role="presentation"><a href="{{url('home/user/comment')}}"><h4 id="h5">使用反馈</h4></a></li>
         <div style="height: 300px;"></div>
     </ul>
 @endsection
@@ -25,7 +25,7 @@
                 <label class="label label-info" style="font-size: 2em;">资格审查</label>
             </div>
         </div>
-        <div class="row" style=" margin-top: 20px;color: snow" >
+        <div class="row" style=" margin-top: 20px;" >
             <form role="form" method="post" action="{{url('home/upload')}}"  enctype="multipart/form-data">
                 <div class="col-lg-6 col-lg-offset-1">
                     <form role="form">
@@ -66,30 +66,30 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#t1').mouseover(function () {
-                $('#h1').css('color','black');
-                $('#t1').mouseout(function () {
-                    $('#h1').css('color','snow');
-                });
-            });
-            $('#t3').mouseover(function () {
-                $('#h3').css('color','black');
-                $('#t3').mouseout(function () {
-                    $('#h3').css('color','snow');
-                });
-            });
-            $('#t4').mouseover(function () {
-                $('#h4').css('color','black');
-                $('#t4').mouseout(function () {
-                    $('#h4').css('color','snow');
-                });
-            });
-            $('#t5').mouseover(function () {
-                $('#h5').css('color','black');
-                $('#t5').mouseout(function () {
-                    $('#h5').css('color','snow');
-                });
-            });
+//            $('#t1').mouseover(function () {
+//                $('#h1').css('color','black');
+//                $('#t1').mouseout(function () {
+//                    $('#h1').css('color','snow');
+//                });
+//            });
+//            $('#t3').mouseover(function () {
+//                $('#h3').css('color','black');
+//                $('#t3').mouseout(function () {
+//                    $('#h3').css('color','snow');
+//                });
+//            });
+//            $('#t4').mouseover(function () {
+//                $('#h4').css('color','black');
+//                $('#t4').mouseout(function () {
+//                    $('#h4').css('color','snow');
+//                });
+//            });
+//            $('#t5').mouseover(function () {
+//                $('#h5').css('color','black');
+//                $('#t5').mouseout(function () {
+//                    $('#h5').css('color','snow');
+//                });
+//            });
             $('#true_name').blur(function () {
                 var file1=$('#true_name');
                 if(file1.val()==''){

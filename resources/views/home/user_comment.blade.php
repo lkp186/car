@@ -4,16 +4,16 @@
 @endsection
 @section('li')
     <ul class="nav nav-pills nav-stacked" role="tablist" style="font-family: 华文宋体;text-align: center;margin-left: -5px;" >
-        <li  id="t1" role="presentation"><a href="{{url('home/personal')}}" ><h5 id="h1" style="color: snow">个人信息</h5></a></li>
-        <li id="t2" role="presentation" ><a href="{{url('home/personal/manage')}}"><h5 id="h2" style="color: snow">账户管理</h5></a></li>
-        <li id="t3" role="presentation"><a href="{{url('home/user/rules')}}"><h5 id="h3"style="color: snow">用户守则</h5></a></li>
-        <li id="t4" role="presentation"><a href="{{url('home/payRecord')}}"><h5 id="h4"style="color: snow">消费记录</h5></a></li>
-        <li id="t5" role="presentation" class="active"><a href="{{url('home/user/comment')}}"><h5 id="h5"style="color: snow">使用反馈</h5></a></li>
+        <li  id="t1" role="presentation"><a href="{{url('home/personal')}}" ><h4 id="h1">个人信息</h4></a></li>
+        <li id="t2" role="presentation" ><a href="{{url('home/personal/manage')}}"><h4 id="h2">账户管理</h4></a></li>
+        <li id="t3" role="presentation"><a href="{{url('home/user/rules')}}"><h4 id="h3">用户守则</h4></a></li>
+        <li id="t4" role="presentation"><a href="{{url('home/payRecord')}}"><h4 id="h4">消费记录</h4></a></li>
+        <li id="t5" role="presentation" class="active"><a href="{{url('home/user/comment')}}"><h4 id="h5">使用反馈</h4></a></li>
         <div style="height: 300px;"></div>
     </ul>
 @endsection
 @section('main')
-    <div style="padding-top: 40px;">
+    <div style="padding-top: 20px;">
         <div style="display: none;">{{date_default_timezone_set('Asia/Shanghai')}}</div>
         @foreach($comment as $value)
             <div style="background-color: white;">
@@ -47,8 +47,8 @@
                     <input type="hidden" name="order_number" value="{{$order_number}}">
                     <textarea name="content" class="form-control " rows="6"></textarea>
                 </div>
-                <div class="col-md-1 col-md-offset-11" style="padding-top: 10px;">
-                    <button class="btn btn-warning btn-block">评论</button>
+                <div class="col-md-2 col-md-offset-10" style="padding-top: 10px;">
+                    <button class="btn btn-warning btn-block" >评论</button>
                 </div>
             </div>
 

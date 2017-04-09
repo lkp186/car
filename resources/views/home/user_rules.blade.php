@@ -4,16 +4,16 @@
 @endsection
 @section('li')
     <ul class="nav nav-pills nav-stacked" role="tablist" style="font-family: 华文宋体;text-align: center;margin-left: -5px;" >
-        <li  id="t1" role="presentation"><a href="{{url('home/personal')}}" ><h5 id="h1" style="color: snow">个人信息</h5></a></li>
-        <li id="t2" role="presentation"><a href="{{url('home/personal/manage')}}"><h5 id="h2" style="color: snow">账户管理</h5></a></li>
-        <li id="t3" class="active" role="presentation"><a href="{{url('home/user/rules')}}"><h5 id="h3"style="color: snow">用户守则</h5></a></li>
-        <li id="t4" role="presentation"><a href="{{url('home/payRecord')}}"><h5 id="h4"style="color: snow">消费记录</h5></a></li>
-        <li id="t5" role="presentation"><a href="#"><h5 id="h5"style="color: snow">使用反馈</h5></a></li>
+        <li  id="t1" role="presentation"><a href="{{url('home/personal')}}" ><h4 id="h1" >个人信息</h4></a></li>
+        <li id="t2" role="presentation"><a href="{{url('home/personal/manage')}}"><h4 id="h2" >账户管理</h4></a></li>
+        <li id="t3" class="active" role="presentation"><a href="{{url('home/user/rules')}}"><h4 id="h3">用户守则</h4></a></li>
+        <li id="t4" role="presentation"><a href="{{url('home/payRecord')}}"><h4 id="h4">消费记录</h4></a></li>
+        <li id="t5" role="presentation"><a href="{{url('home/user/comment')}}"><h4 id="h5">使用反馈</h4></a></li>
     </ul>
 @endsection
 @section('main')
-    <h1 style="margin-top: 27%;text-align: center;color: snow">Share—Car用户守则</h1>
-    <div style="text-indent:2em;color:snow;font-family:楷体;background-color: snow;opacity: 0.9;width: 1200px;height: 800px;">
+    <h1 style="padding-top: 35%;text-align: center;">Share—Car用户守则</h1>
+    <div style="text-indent:2em;color:snow;font-family:楷体;background-color: snow;opacity: 0.9;">
         <div style="height: 12px;"></div>
         <h3 style="color: black;">一.使用限制</h3>
         <div style="font-size: 1.2em;color: black">
