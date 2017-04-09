@@ -16,7 +16,7 @@ class CommentController extends Controller
     public function commentView(Request $request){
         $user_id=$request->session()->get('user_id');
         $ID=User_info::where('user_id',$user_id)->value('user_ID_card'); //获取身份证编号
-        $result=Order_info::where(['order_name_ID'=>$ID])->get();
+        $result=Order_info::where(['order_name_ID'=>$ID,'order_comment_status'=>0])->get();
         return view('home.comment',['result'=>$result]);
     }
     //用户输入评论界面
