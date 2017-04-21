@@ -7,7 +7,8 @@
     </script>
 @endsection
 @section('content')
-    <div id="allmap" style="position:fixed;;width:1900px; height:880px;margin-top: -20px;"></div>
+    <div style="height: 110px;"></div>
+    <div id="allmap" style="position:relative;;width:100%; height:800px;margin-top: -20px;"></div>
     <script type="text/javascript">
         map = new BMap.Map("allmap");
 
