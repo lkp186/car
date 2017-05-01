@@ -211,7 +211,7 @@ $item_str
         $keyword=trim($obj->Content);
        if (strstr($keyword,'天气')){
             if(!empty(mb_substr($keyword,2,10,"utf-8"))){
-                $url="http://b8107.cn/weiChat/weather?city=".mb_substr($keyword,2,10,"utf-8");
+                $url="http://b8107.cn/weiChat/weather?city=".trim(mb_substr($keyword,2,10,"utf-8"));
                 $json=$this->http_request($url);
                 $array=json_decode($json,true);
                 if(empty($array)){
@@ -221,7 +221,7 @@ $item_str
                     $weatherArray[] = array(
                         "Title" =>$array['results'][0]["location"]['name']."天气预报",
                         "Description" =>"",
-                        "PicUrl" =>"http://b8107.cn/public/weixin/image/coser.jpg",
+                        "PicUrl" =>"http://b8107.cn/public/weixin/image/tianqi.jpg",
                         "Url" =>"");
                     for ($i = 0; $i < count($array['results'][0]["daily"]); $i++) {
                         $img=$array['results'][0]['daily'][$i]['code_day'];
