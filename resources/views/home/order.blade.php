@@ -32,7 +32,7 @@
 
 @section('content')
     <div class="container">
-        <div class="jumbotron" style="background-color:oldlace;margin-top: -20px;">
+        <div class="jumbotron" style="background-color:oldlace;margin-top: 90px;">
             <h3>城市辖区：&nbsp;&nbsp;<a href="{{url('order')}}" style="text-decoration: none;"><span id="all_area" class="{{@$class}}">全部</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 @foreach($areaName as $value)
                     <a href="{{url('home/order/areaAllCar?city_id='.$value->city_id)}}"style="text-decoration: none;">
