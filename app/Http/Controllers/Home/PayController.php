@@ -23,10 +23,14 @@ class PayController extends Controller
         $id=$request->session()->get('user_id');
         $status=User_status_info::where('user_id',$id)->value('user_status');
         $ID=User_info::where('user_id',$id)->value('user_ID_card');
-        //判断用户是否缴纳了保证金
+        //判断用户是否缴纳了保证金,保证金低于500元无法预约
         $margin_status=Margin_info::where('margin_ID_card',$ID)->value('margin_status');
+
+        $margin_balance=Margin_info::where('margin_ID_card',$ID)->value('margin_balance');
         if(empty($margin_status)){
             return view('home.margin_403');
+        }else if ($margin_balance<='500'){
+            return '保证金低于500元，请重新缴纳3000元保证金';
         }
         //判断用户是否已经通过审核，只有审核后才能下单，否则报403
         if($status==1){
