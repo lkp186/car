@@ -74,11 +74,10 @@ class PayController extends Controller
             $money=$input['money'];
             $ID=User_info::where('user_id',$user_id)->value('user_ID_card'); //获取身份证编号
             //判断用户是否下过订单
-            $user_name=Order_info::where('order_name_ID',$ID)->value('user_name');
-            if(!empty($user_name)){
+            $number=Get_car_info::where('user_ID',$ID)->value('car_number');
+            if(!empty($number)){
                 return 2;
             }
-
             $order=new Order_info;
             //往订单表里面插入数据
             $order->car_image=$image;
@@ -100,6 +99,7 @@ class PayController extends Controller
             $getCar=new Get_car_info;
             $getCar->car_number=$car_number;
             $getCar->order_time=time();
+            $getCar->user_ID=$ID;
             $getCar->getCar_code=$get_car_code;
             $getCar->returnCar_code=$return_car_code;
             $getCar->save();
