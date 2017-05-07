@@ -24,7 +24,7 @@ class PersonalController extends Controller
         if(empty($user_status)){
             $user_status='未';
         }else{
-            $user_status='是';
+            $user_status='已';
         }
 
         //查询用户是否缴纳了保证金

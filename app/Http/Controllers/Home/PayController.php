@@ -7,6 +7,7 @@ use App\Http\Model\Car_info;
 use App\Http\Model\City_info;
 use App\Http\Model\Comment_info;
 use App\Http\Model\Image_info;
+use App\Http\Model\Margin_info;
 use App\Http\Model\Order_info;
 use App\Http\Model\User_info;
 use App\Http\Model\User_status_info;
@@ -21,6 +22,12 @@ class PayController extends Controller
     public function index(Request $request){
         $id=$request->session()->get('user_id');
         $status=User_status_info::where('user_id',$id)->value('user_status');
+        $ID=User_info::where('user_id',$id)->value('user_ID_card');
+        //判断用户是否缴纳了保证金
+        $margin_status=Margin_info::where('margin_ID_card',$ID)->value('margin_status');
+        if(empty($margin_status)){
+            return view('home.margin_403');
+        }
         //判断用户是否已经通过审核，只有审核后才能下单，否则报403
         if($status==1){
             $input=$request->all();

@@ -80,7 +80,7 @@
                                 </p>
                                 <div class="btn-group">
                                     <button id="bt" type="button" class="btn btn-sm btn-default">详情</button>
-                                    <button  type="submit" class="btn btn-sm btn-primary">预约</button>
+                                    <button  id="order" type="submit" class="btn btn-sm btn-primary">预约</button>
                                 </div>
                             </div>
                         </div>
