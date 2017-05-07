@@ -19,15 +19,15 @@
 @endsection
 
 @section('main')
-    <div class="container" style="margin-top: 30px;">
+    <div class="" style="margin-top: 30px;">
         <div class="row">
-            <div class="col-lg-offset-3 col-lg-5">
+            <div class="col-lg-offset-5 col-lg-6">
                 <label class="label label-info" style="font-size: 2em;">资格审查</label>
             </div>
         </div>
         <div class="row" style=" margin-top: 20px;" >
             <form role="form" method="post" action="{{url('home/upload')}}"  enctype="multipart/form-data">
-                <div class="col-lg-6 col-lg-offset-1">
+                <div class="col-lg-8 col-lg-offset-2">
                     <form role="form">
                         {{csrf_field()}}
                         <div class="form-group">

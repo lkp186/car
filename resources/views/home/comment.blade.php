@@ -15,6 +15,11 @@
 @section('main')
     <div>
         <div style="display: none;">{{date_default_timezone_set('Asia/Shanghai')}}</div>
+        @if(count($result)==0)
+            <div style="margin:0 auto;;background-color: white; border: #5bc0de 1px dashed  ;height: 200px;">
+                <h1 style="text-align: center;padding-top: 40px;">很遗憾，您没有任何的订单。</h1>
+            </div>
+        @else
         @foreach($result as $value)
             <div style="background-color: white;">
                 <table class="table" style="font-size: 1.5em;">
@@ -47,6 +52,7 @@
             </div>
             <div style="background-color: white;"></div>
         @endforeach
+        @endif
     </div>
 @endsection
 @section('script')

@@ -14,6 +14,11 @@
 @endsection
 @section('main')
     <div style="display: none;">{{date_default_timezone_set('Asia/Shanghai')}}</div>
+    @if(count($record)==0)
+        <div style="margin:0 auto;;background-color: white; border: #5bc0de 1px dashed  ;height: 200px;">
+            <h1 style="text-align: center;padding-top: 40px;">很遗憾，您没有任何的订单。</h1>
+        </div>
+    @else
     <table class="table">
         <thead>
             <th>订单编号</th>
@@ -34,5 +39,6 @@
             </tr>
         @endforeach
     </table>
+    @endif
 
 @endsection

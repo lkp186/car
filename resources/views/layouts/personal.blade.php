@@ -25,7 +25,7 @@
                     <li id="li"><a href="{{url('about')}}">关于我们</a></li>
                 </ul>
 
-                <div  style="margin-left: 89%;margin-top: 5px;">
+                <div  style="margin-left: 88%;margin-top: 5px;">
                     <a href="#" role="button" style=" text-decoration: none;"><span class="label label-success" style="font-size: 0.8em;">{{Session::get('username')}}已登录</span></a>
                     &nbsp;&nbsp;
                     <a href="{{url('home/login/logout')}}"style=" text-decoration: none;"><span class="label label-danger"style="font-size: 0.8em;">退出</span></a>
@@ -39,7 +39,7 @@
     @yield('li')
 </div>
 <div class="row" style="width: 60%;position: relative;margin-top: -584px;margin-left: 340px;">
-    <div style="height: 584px;">
+    <div style="height: 584px;width: 100%;">
         @yield('main')
     </div>
 </div>

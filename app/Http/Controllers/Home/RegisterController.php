@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Http\Model\Comment_info;
 use App\Http\Model\Image_info;
 use App\Http\Model\User_info;
 use Illuminate\Http\Request;

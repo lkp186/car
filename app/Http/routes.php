@@ -88,6 +88,7 @@ Route::group(['middleware' => ['web','home'],'prefix'=>'home','namespace'=>'Home
     Route::get('personal','PersonalController@index');//个人中心页面
     Route::get('personal/manage','PersonalController@personalManage');//账户管理页面
     Route::post('upload','UploadController@index');//用户上传身份证和驾照
+    Route::get('personal/margin','MarginController@index');//缴纳保证金界面
 
     //用户守则
     Route::get('user/rules','PersonalController@rules');

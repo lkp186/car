@@ -13,20 +13,63 @@
 @endsection
 @section('main')
     <div style="display: none;">{{date_default_timezone_set('PRC')}}</div>
-    <div style="padding-top: 35%">
-        <div class="container">
+    <div style="padding-top: 35%;">
+        <div >
             {{--<div class="page-header" style="width: 1200px;position: absolute;margin-left: -10%;margin-top: 0.6%">--}}
                 {{--<a href="#" class="thumbnail" style="width: 17%"><img  src="{{asset('public/image/personal/head.jpg')}}"></a>--}}
             {{--</div>--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-lg-9 col-lg-offset-3">--}}
+                    {{--<h1 style="font-family: 华文楷体;">--}}
+                        {{--欢迎来到Share-car！{{Session::get('username')}}--}}
+                    {{--</h1>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="row">
-                <div class="col-lg-6 col-lg-offset-3">
-                    <h1 style="font-family: 华文楷体;">
-                        欢迎来到Share-car！{{Session::get('username')}}
-                    </h1>
+                <div class="col-sm-2">
+                    <img class="img-rounded img-responsive" src="{{asset('public/image/head2.jpeg')}}" style="height: 120px;">
+                </div>
+                <div class="col-sm-10" style="padding-top: 15px;">
+                    <table class="table" style="letter-spacing: 2px" >
+                        <tr class="warning">
+                            <td>
+                                <label>用户名:</label>
+                                <label>{{Session::get('username')}}</label>
+                            </td>
+                            <td>
+                                <label>用户状态:</label>
+                                <label>{{$user_status}}认证
+                                    <small>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="{{url('home/personal/manage')}}" style="text-decoration: none;">
+                                            去认证</a>
+                                    </small>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="info">
+                            <td>
+                                <label>身份证号:</label>
+                                <label>{{$ID}}</label>
+                            </td>
+                            <td>
+                                <label>是否缴纳保证金：</label>
+                                <label>{{$margin_status}}
+                                    <small>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="{{url('home/personal/margin')}}" style="text-decoration: none;">去缴纳</a>
+                                    </small>
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-10">
+                <div class="col-sm-12">
+                    <hr style="height:4px;background-color:#eb9316;border:1px; " width="100%" color="#00ff90"  size="24px">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
                     <div class="panel panel-default panel-info">
                         <div class="panel-heading ">
                             <h3 class="panel-title">我的最新订单</h3>
