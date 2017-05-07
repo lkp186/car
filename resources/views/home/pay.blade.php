@@ -368,7 +368,10 @@
                             if(data=='1'){
                                 sweetAlert("支付成功!", "", "success");
                                 setTimeout(window.location.href= "{{url('home/personal')}}", 2000);
-                            }else {
+                            }else if(data=='2'){
+                                sweetAlert("抱歉,您已经下过订单了!", "", "error");
+                            }
+                            else {
                                 sweetAlert("抱歉,未知的错误!", "", "error");
                             }
                         }
