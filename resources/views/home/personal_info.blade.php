@@ -39,10 +39,12 @@
                             <td>
                                 <label>用户状态:</label>
                                 <label>{{$user_status}}认证
-                                    <small>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="{{url('home/personal/manage')}}" style="text-decoration: none;">
-                                            去认证</a>
-                                    </small>
+                                    @if($user_status=='未')
+                                        <small>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="{{url('home/personal/manage')}}" style="text-decoration: none;">
+                                                去认证</a>
+                                        </small>
+                                    @endif
                                 </label>
                             </td>
                         </tr>
@@ -54,9 +56,11 @@
                             <td>
                                 <label>是否缴纳保证金：</label>
                                 <label>{{$margin_status}}
-                                    <small>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="{{url('home/personal/margin')}}" style="text-decoration: none;">去缴纳</a>
-                                    </small>
+                                    @if($margin_status=='否')
+                                        <small>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="{{url('home/personal/margin?ID='.$ID)}}" style="text-decoration: none;">去缴纳</a>
+                                        </small>
+                                    @endif
                                 </label>
                             </td>
                         </tr>

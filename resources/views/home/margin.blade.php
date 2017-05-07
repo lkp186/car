@@ -28,8 +28,17 @@
 @endsection
 @section('content')
     <div class="container" style="padding-top: 90px;">
+
         <div class="row">
             <div class="col-sm-11 col-sm-offset-3" style="padding-top: 20px;" >
+                <div class="col-sm-12" style="padding-left: 10px;">
+                    <div class="col-sm-2">
+                        <h4>保证金金额：</h4>
+                    </div>
+                    <div class="col-sm-2">
+                        <h4 style="color: red;">3000元</h4>
+                    </div>
+                </div>
                 <div class="col-sm-12">
                     <h4 style="color: black;padding-left:10px;">付款方式：</h4>
                     <div class="col-sm-2">
@@ -53,7 +62,7 @@
 
         <div class="row">
             {{--各个银行--}}
-            <div id="bank_list" class="col-sm-offset-1 col-sm-11" style="display: none;margin-top: 10px; padding-left: 15px;">
+            <div id="bank_list" class="col-sm-offset-3 col-sm-11" style="display:none ;margin-top: 10px; padding-left: 15px;">
                 <div class="col-sm-12">
                     <div class="col-sm-2">
                         <div id="zhaoshang" style="border: #BCCCEE 1px solid;width: 146px;margin-right: 10px;height: 56px;position: relative;cursor: pointer;">
@@ -99,6 +108,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 20px;">
+            <div class="col-sm-2 col-sm-offset-7">
+                <button href="{{url('home/personal/margin/pay')}}" class="btn btn-primary btn-block" style="width: 125px; ">
+                    立即付款
+                </button>
             </div>
         </div>
     </div>
@@ -177,6 +193,28 @@
                 $('#wangyi').css('border','#BCCCEE 1px solid');
                 $('#weixin').css('border','#BCCCEE 1px solid');
                 $('#bank_list').css('display','none');
+            });
+        });
+    </script>
+    {{--ajax付款--}}
+    <script type="text/javascript">
+        $(function () {
+            $('button').click(function () {
+                $.ajax({
+                    url:"{{url('home/personal/margin/pay')}}",
+                    type:'POST',
+                    dataType:'html',
+                    data:{
+                        '_token':'{{csrf_token()}}',
+                        'ID':'{{$ID}}'
+                    },
+                    success:function (data) {
+                        if(data){
+                            sweetAlert("支付成功！", "", "success");
+                            setTimeout(window.location.href= "{{url('home/personal')}}", 5000);
+                        }
+                    }
+                });
             });
         });
     </script>
