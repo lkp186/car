@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class PayController extends Controller
 {
@@ -103,6 +104,21 @@ class PayController extends Controller
             $getCar->getCar_code=$get_car_code;
             $getCar->returnCar_code=$return_car_code;
             $getCar->save();
+            //向用户的手机发送取车码以及还车码
+            $user_email=User_info::where('user_id',$user_id)->value('user_email');
+            $flag = Mail::send(
+                'emails.sendCode',
+                [
+                    'name'=>$user_email,
+                    'get_car_code'=>$get_car_code,
+                    'return_car_code'=>$return_car_code],
+                function($message)use($user_email){
+                $to = $user_email;
+                $message ->to($to)->subject('取车码以及还车码');
+            });
+            if(!$flag){
+                return 3;//发送邮件失败
+            }
             return 1;
         }else{
             return 0;

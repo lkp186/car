@@ -370,6 +370,8 @@
                                 setTimeout(window.location.href= "{{url('home/personal')}}", 2000);
                             }else if(data=='2'){
                                 sweetAlert("抱歉,您已经下过订单了!", "", "error");
+                            }else if(data=='3'){
+                                sweetAlert("抱歉,邮件发送失败!", "", "error");
                             }
                             else {
                                 sweetAlert("抱歉,未知的错误!", "", "error");
