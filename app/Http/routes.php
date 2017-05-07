@@ -28,7 +28,6 @@ Route::get('/', function () {
 //主题界面的路由
 Route::group(['middleware' => ['web'],'namespace'=>'Home'], function () {
     Route::get('home','HomeController@index');//网站主页
-    Route::get('title','HomeController@title');//网站封面
     Route::get('location','LocationController@index');//网点分布
     Route::get('order','OrderController@index');//在线下单，所有区域的全部车辆
     Route::get('search','SearchOrderController@index');//用户订单查询
@@ -159,4 +158,11 @@ Route::group(['middleware'=>'web','prefix'=>'weiChat','namespace'=>'WeChat'],fun
     Route::get('netStations','NetStationController@netStation');//网点分布
 });
 
+
+
+//主题界面的路由
+Route::group(['middleware' => ['web'],'namespace'=>'Home'], function () {
+    Route::get('getCar','GetCarController@index');//用户取车路由
+
+});
 

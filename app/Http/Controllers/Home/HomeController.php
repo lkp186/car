@@ -18,10 +18,6 @@ class HomeController extends Controller
         $comment=Comment_info::get();
         return view('home.home',['result'=>$result,'image'=>$image,'comment'=>$comment]);
     }
-    //网站封面
-    public function title(){
-        return view('home.title');
-    }
     //订车须知
     public function notice(){
         return view('home.notice');
