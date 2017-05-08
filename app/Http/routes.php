@@ -162,6 +162,7 @@ Route::group(['middleware'=>'web','prefix'=>'weiChat','namespace'=>'WeChat'],fun
 
 //主题界面的路由
 Route::group(['middleware' => ['web'],'namespace'=>'Home'], function () {
-    Route::get('getCar','GetCarController@index');//用户取车路由
+    Route::get('get/car','GetCarController@index');//用户取车路由
+    Route::post('get/getCar','GetCarController@getCar');//用户取车路由
 });
 
