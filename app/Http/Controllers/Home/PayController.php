@@ -30,9 +30,11 @@ class PayController extends Controller
 
         $margin_balance=Margin_info::where('margin_ID_card',$ID)->value('margin_balance');
         if(empty($margin_status)){
-            return view('home.margin_403');
+            $warning="请先请缴纳保证金!";
+            return view('home.margin_403',['warning'=>$warning]);
         }else if ($margin_balance<='500'){
-            return '保证金低于500元，请重新缴纳3000元保证金';
+            $warning='保证金低于500元，请重新缴纳3000元保证金';
+            return view('home.margin_403',['warning'=>$warning]);
         }
         //判断用户是否已经通过审核，只有审核后才能下单，否则报403
         if($status==1){

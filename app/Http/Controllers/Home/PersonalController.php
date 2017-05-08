@@ -29,6 +29,8 @@ class PersonalController extends Controller
 
         //查询用户是否缴纳了保证金
         $margin_status=Margin_info::where('margin_ID_card',$ID)->value('margin_status');
+        //保证金余额
+        $margin_balance=Margin_info::where('margin_ID_card',$ID)->value('margin_balance');
         if(empty($margin_status)){
             $margin_status='否';
         }else{
@@ -40,7 +42,8 @@ class PersonalController extends Controller
                 'order'=>$order,
                 'ID'=>$ID,
                 'margin_status'=>$margin_status,
-                'user_status'=>$user_status
+                'user_status'=>$user_status,
+                'margin_balance'=>$margin_balance
             ]
         );
     }

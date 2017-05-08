@@ -60,6 +60,10 @@
                                         <small>&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="{{url('home/personal/margin?ID='.$ID)}}" style="text-decoration: none;">去缴纳</a>
                                         </small>
+                                        @elseif($margin_balance<=500)
+                                        <small>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="{{url('home/personal/margin?ID='.$ID)}}" style="text-decoration: none;">余额不足,去缴纳</a>
+                                        </small>
                                     @endif
                                 </label>
                             </td>

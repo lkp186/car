@@ -43,8 +43,8 @@
 <div class="container">
     <div class="container_2"><img src="{{asset('public/403/images/3.22.gif')}}" ></div>
     <div class="container_3"><!--<img src="images/404_1.png" >-->
-        <div class="container_3_1" align="center"><span>SORRY!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                请先请缴纳保证金!</span></div>
+        <div class="container_3_1" align="center"><span>SORRY!&nbsp;&nbsp;&nbsp;&nbsp;
+                {{$warning}}</span></div>
     </div>
 </div>
 <!--<img src="images/001_1.gif" width="1000px" height="600px">--></div>
