@@ -56,9 +56,11 @@ class PayController extends Controller
     public function countPay(Request $request){
         if(!empty($request->input('timeByHour'))){
             $hourPrice=$request->input('hourPrice');
+            $request->session()->put('use_time',$request->input('timeByHour')*3600);
             return $request->input('timeByHour')*$hourPrice;
         }else{
             $dayPrice=$request->input('dayPrice');
+            $request->session()->put('use_time',$request->input('timeByDay')*86400);
             return $request->input('timeByDay')*$dayPrice;
         }
     }
@@ -79,6 +81,7 @@ class PayController extends Controller
             if(!empty($number)){
                 return 2;
             }
+            $use_time=$request->session()->pull('use_time');//用户租车时间
             $order=new Order_info;
             //往订单表里面插入数据
             $order->car_image=$image;
@@ -91,6 +94,7 @@ class PayController extends Controller
             $order->order_time=time();
             $order->order_name_ID=$ID;
             $order->car_location=$location;
+            $order->use_time=$use_time;
             $order->save();
             //修改车的状态，改成已经被租用
             Car_info::where('car_number',$car_number)->update(['car_status'=>0]);

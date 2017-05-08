@@ -135,19 +135,45 @@
                     dataType:'html',
                     data:{
                         '_token':'{{csrf_token()}}',
-                        'code':code,
+                        'code':'苏'+code,
                     },
                     success:function (data) {
                         if(data==0){
                             sweetAlert("取车码不正确!", "", "error");
-                        }else {
+                        }else if(data==2){
+                            sweetAlert("您已经成功取车", "", "success");
+                        }
+                        else {
                             sweetAlert("取车成功！请拿走钥匙", "", "success");
                         }
                     }
                 });
             });
             $('#return').click(function () {
-                $.ajax();
+                //还车的ajax请求
+                $('#return').click(function () {
+                    var code=$('textarea').val();
+                    $.ajax({
+                        url:"{{url('get/returnCar')}}",
+                        type:'POST',
+                        dataType:'html',
+                        data:{
+                            '_token':'{{csrf_token()}}',
+                            'code':'苏'+code,
+                        },
+                        success:function (data) {
+                           if(data==1){
+                               sweetAlert("还车成功！请放入车钥匙", "", "success");
+                           }else if(data==2){
+                               sweetAlert("请不要重复还车!", "", "success");
+                           }
+                           else if(data==0){
+                               sweetAlert("还车码不正确或者您已还车！", "", "error");
+                           }
+
+                        }
+                    });
+                });
             });
         });
     </script>
