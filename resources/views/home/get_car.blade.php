@@ -164,13 +164,10 @@
                         success:function (data) {
                            if(data==1){
                                sweetAlert("还车成功！请放入车钥匙", "", "success");
-                           }else if(data==2){
-                               sweetAlert("请不要重复还车!", "", "success");
                            }
                            else if(data==0){
                                sweetAlert("还车码不正确或者您已还车！", "", "error");
                            }
-
                         }
                     });
                 });

@@ -94,7 +94,7 @@ class PayController extends Controller
             $order->order_time=time();
             $order->order_name_ID=$ID;
             $order->car_location=$location;
-            $order->use_time=$use_time;
+
             $order->save();
             //修改车的状态，改成已经被租用
             Car_info::where('car_number',$car_number)->update(['car_status'=>0]);
@@ -107,6 +107,7 @@ class PayController extends Controller
             $getCar->user_ID=$ID;
             $getCar->getCar_code=$get_car_code;
             $getCar->returnCar_code=$return_car_code;
+            $getCar->use_time=$use_time;
             $getCar->save();
             //向用户的手机发送取车码以及还车码
             $user_email=User_info::where('user_id',$user_id)->value('user_email');
