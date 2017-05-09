@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>账号绑定</title>
     <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
-    <script src="{{asset('public/js/sweet-alert.js')}}"></script>
 </head>
 <body>
 <div class="jumbotron" style="text-align: center;"><h2 style="font-family: 微软雅黑">Share-Car账号绑定</h2></div>
@@ -50,9 +49,9 @@
                 },
                 success:function (data) {
                     if(data==0){
-                        sweetAlert("用户名或密码不正确!", "", "error");
+                        alert("用户名或密码不正确!");
                     }else {
-                        sweetAlert("绑定成功!", "", "success");
+                        alert("绑定成功!");
                     }
                 }
             });
