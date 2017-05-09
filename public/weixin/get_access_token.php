@@ -92,6 +92,11 @@ $json_menu='
                "url":"http://m.kuaidi100.com/"
            },
            {
+               "type":"view",
+               "name":"账号绑定",
+               "url":"http://b8107.cn/weiChat/binding"
+           },
+           {
                "type":"click",
                "name":"当前天气",
                "key":"weather"

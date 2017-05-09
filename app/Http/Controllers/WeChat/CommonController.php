@@ -24,4 +24,8 @@ class CommonController extends Controller
         $record=Order_info::where('order_name_ID',$ID)->get();
         return view('weixin.search_order',['record'=>$record]);
     }
+    //绑定微信账号信息
+    public function binding(){
+        return '绑定账号信息';
+    }
 }
