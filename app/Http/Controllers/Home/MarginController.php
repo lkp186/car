@@ -31,6 +31,7 @@ class MarginController extends Controller
             $margin->margin_balance='3000';
             $margin->save();
         }else{
+            //保证金充值
             $margin_balance=Margin_info::where('margin_ID_card',$ID)->value('margin_balance');
             Margin_info::where('margin_ID_card',$ID)->update(['margin_balance'=>$margin_balance+3000]);
         }
