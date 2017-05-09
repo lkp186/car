@@ -39,7 +39,7 @@ class CommonController extends Controller
         $user_name=User_info::where(['user_email'=>$email,'user_ID_card'=>$ID])->value('user_name');
         if(empty($user_name)){
             $msg='绑定失败';
-            return view('bind_message',['msg'=>$msg]);
+            return view('weixin.bind_message',['msg'=>$msg]);
         }else{
             //将用户的微信与网站账号绑定起来
             User_info::where('user_ID_card',$ID)->update(['OpenID'=>$OpenID]);
