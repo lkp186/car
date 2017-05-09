@@ -156,7 +156,8 @@ Route::group(['middleware'=>'web','prefix'=>'weiChat','namespace'=>'WeChat'],fun
     Route::get('searchOrder','CommonController@searchOrder');//订单查询
     Route::post('searchOrder/result','CommonController@searchResult');//展示查询结果
     Route::get('netStations','NetStationController@netStation');//网点分布
-    Route::get('binding','CommonController@binding');//用户账号微信绑定;
+    Route::get('binding','CommonController@binding');//用户账号微信绑定界面
+    Route::post('bindOpt','CommonController@bindOpt');//用户账号微信绑定操作
 
 
 

@@ -126,11 +126,12 @@ class wechatCallbackapiTest
                         $result=$this->transText($obj,$content);
                         break;
                     case '账号绑定':
+                        $OpenID=$obj->FromUserName;
                         $content[] = array(
                             "Title" =>"账号绑定",
                             "Description" =>"将微信号与ShareCar账号绑定",
                             "PicUrl" =>"http://b8107.cn/public/weixin/bind.jpg",
-                            "Url" =>"http://b8107.cn/weiChat/binding"
+                            "Url" =>"http://b8107.cn/weiChat/binding?OpenID=$OpenID"
                         );
                         $result=$this->transNews($obj,$content);
                         break;

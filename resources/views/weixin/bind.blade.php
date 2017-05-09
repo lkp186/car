@@ -10,26 +10,53 @@
 <div class="container">
     <form class="form-horizontal">
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">小贴士:填写的信息均为您在ShareCar官网上注册的信息</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">小贴士:填写的信息均为您在ShareCar官网上注册的信息!!!</label>
         </div>
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="email">
+                <input type="email" name="email" class="form-control" id="email" placeholder="email">
             </div>
         </div>
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">身份证号</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="ID" placeholder="ID">
+                <input type="password" name="ID" class="form-control" id="ID" placeholder="ID">
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">绑定</button>
+                <button type="submit" class="btn btn-primary">绑定</button>
             </div>
         </div>
     </form>
 </div>
+<script type="text/javascript" src="{{asset('public/js/jquery.min.js')}}"></script>
+<script type="text/javascript">
+    $(function () {
+        $('button').click(function () {
+            var email=$('#email').val();
+            var ID=$('#ID').val();
+            $.ajax({
+                url:"{{url('weiChat/bindOpt')}}",
+                type:'POST',
+                dataType:'html',
+                data:{
+                    '_token':'{{csrf_token()}}',
+                    'email':email,
+                    'ID':ID,
+                    'OpenID':'{{$OpenID}}'
+                },
+                success:function (data) {
+                    if(data==0){
+                        sweetAlert("用户名或密码不正确!", "", "error");
+                    }else {
+                        setTimeout(window.location.href= "{{url('')}}", 1000);
+                    }
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
