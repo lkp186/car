@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container">
-    <div align="center" style="font-size: 1.2em;padding-top: 60px;">
+    <div align="center" style="font-size: 1.2em;padding-top: 60px;font-family: 微软雅黑">
         @if($status==1)
             <img style="height: 60px;width: 60px;" src="{{asset('public/weixin/sign-check-icon.png')}}">{{$msg}}
         @else
