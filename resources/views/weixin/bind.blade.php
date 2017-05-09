@@ -12,7 +12,8 @@
         {{csrf_field()}}
         <input value="{{$OpenID}}" type="hidden">
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-8 control-label">小贴士:填写的信息均为您在ShareCar官网上注册的信息!!!</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">小贴士:</label>
+            <label for="inputEmail3" class="col-sm-10 control-label">填写的信息均为您在ShareCar官网上注册的信息!!!</label>
         </div>
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
