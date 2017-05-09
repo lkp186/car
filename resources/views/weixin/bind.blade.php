@@ -6,32 +6,27 @@
     <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
 </head>
 <body>
+<div class="jumbotron" style="text-align: center;"><h2 style="font-family: 微软雅黑">Share-Car账号绑定</h2></div>
 <div class="container">
     <form class="form-horizontal">
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">小贴士:填写的信息均为您在ShareCar官网上注册的信息</label>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                <input type="email" class="form-control" id="email" placeholder="email">
             </div>
         </div>
         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <label for="inputPassword3" class="col-sm-2 control-label">身份证号</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                <input type="password" class="form-control" id="ID" placeholder="ID">
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Remember me
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Sign in</button>
+                <button type="submit" class="btn btn-default">绑定</button>
             </div>
         </div>
     </form>
