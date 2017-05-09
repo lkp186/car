@@ -56,10 +56,20 @@ class GetCarController extends Controller
                 //给用户发邮件通知
                 $user_ID=Get_car_info::where('returnCar_code',$code)->value('user_ID');
                 $email=User_info::where('user_ID_card',$user_ID)->value('user_email');
-                Mail::send('emails.sendExtraMoney',['name'=>$email,'extra_money'=>$extra],function($message)use($email){
-                    $to = $email;
-                    $message ->to($to)->subject('额外费用');
-                });
+
+                //假如额外费用超出3000元
+                if($extra>3000){
+                    Mail::send('emails.sendDangeWarning',['name'=>$email,'arrearage'=>3000-$extra],function($message)use($email){
+                        $to = $email;
+                        $message ->to($to)->subject('警告，费用超支');
+                    });
+                }else{
+                    Mail::send('emails.sendExtraMoney',['name'=>$email,'extra_money'=>$extra],function($message)use($email){
+                        $to = $email;
+                        $message ->to($to)->subject('额外费用');
+                    });
+                }
+
                 //从保证金中扣除额外费用
                 Margin_info::where('margin_ID_card',$user_ID)->update(['margin_balance'=>3000-$extra]);
             }
