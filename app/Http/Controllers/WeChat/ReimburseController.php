@@ -23,7 +23,7 @@ class ReimburseController extends Controller
         $gauge_after=$request->file('gauge_after');//加油后的油表照片
         $file=array($gas_invoice,$gauge_before,$gauge_after);
         // 文件是否上传成功
-        if ($file[0]->isValid()) {
+        if ($gas_invoice->isValid()&&$gauge_before->isValid()&&$gauge_after->isValid()) {
             $img=array();
             for($i=0;$i<=2;$i++){
                 // 获取文件相关信息
