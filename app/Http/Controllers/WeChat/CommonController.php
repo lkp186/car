@@ -26,6 +26,6 @@ class CommonController extends Controller
     }
     //绑定微信账号信息
     public function binding(){
-        return '绑定账号信息';
+        return view();
     }
 }
