@@ -15,13 +15,13 @@
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
             <div class="col-sm-10">
-                <input type="email" name="email" class="form-control" id="email" placeholder="email">
+                <input type="text" name="email" class="form-control" id="email" placeholder="email">
             </div>
         </div>
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">身份证号</label>
             <div class="col-sm-10">
-                <input type="password" name="ID" class="form-control" id="ID" placeholder="ID">
+                <input type="text" name="ID" class="form-control" id="ID" placeholder="ID">
             </div>
         </div>
         <div class="form-group">
