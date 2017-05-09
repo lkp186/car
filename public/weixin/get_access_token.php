@@ -74,6 +74,11 @@ $json_menu='
                "type":"click",
                "name":"油费报销",
                "key":"油费报销"
+           },
+           {
+               "type":"click",
+               "name":"账号绑定",
+               "key":"账号绑定"
            }
            
            ]
@@ -90,11 +95,6 @@ $json_menu='
                "type":"view",
                "name":"快递查询",
                "url":"http://m.kuaidi100.com/"
-           },
-           {
-               "type":"view",
-               "name":"账号绑定",
-               "url":"http://b8107.cn/weiChat/binding"
            },
            {
                "type":"click",

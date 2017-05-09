@@ -125,6 +125,15 @@ class wechatCallbackapiTest
                         $content="请先发送您的身份证号过来,便于我们确认您的身份！";
                         $result=$this->transText($obj,$content);
                         break;
+                    case '账号绑定':
+                        $content[] = array(
+                            "Title" =>"账号绑定",
+                            "Description" =>"将微信号与ShareCar账号绑定",
+                            "PicUrl" =>"http://b8107.cn/public/weixin/ss.jpg",
+                            "Url" =>"http://b8107.cn/weiChat/binding"
+                        );
+                        $result=$this->transNews($obj,$content);
+                        break;
                     default:
                         //假如用户没有开启获取地理位置的权限则会执行该操作，删除数据库中用户的地理位置
                         $content='抱歉，发生了位置的错误，无法匹配';$result=$this->transText($obj,$content);
