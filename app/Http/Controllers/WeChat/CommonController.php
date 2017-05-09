@@ -49,4 +49,16 @@ class CommonController extends Controller
             return view('weixin.bind_message',['msg'=>$msg,'status'=>$status]);
         }
     }
+    //验证用户是否完成了绑定
+    public function checkBinding(Request $request){
+        $OpenID=$request->input('OpenID');
+        $user_name=User_info::where('OpenID',$OpenID)->value('user_name');
+        if(empty($user_name)){
+            $status=array('status'=>0);
+        }else{
+            $status=array('status'=>1);
+        }
+        $json=json_encode($status,true);
+        return $json;
+    }
 }

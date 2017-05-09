@@ -122,8 +122,23 @@ class wechatCallbackapiTest
                         $result=$this->transText($obj,$content);
                         break;
                     case '油费报销':
-                        $content="请先发送您的身份证号过来,便于我们确认您的身份！";
-                        $result=$this->transText($obj,$content);
+                        $OpenID=$obj->FromUserName;
+                        $url="http://b8107.cn/weiChat/checkUsers?OpenID=$OpenID";
+                        $json=$this->http_request($url);//进行用户验证
+                        $status=json_decode($json,true);
+                        if($status['status']==0){
+                            $content="请先进行账号绑定!";
+                            $result=$this->transText($obj,$content);
+                        }else{
+                            $content[] = array(
+                                "Title" =>"油费报销",
+                                "Description" =>"请上传相应的图片",
+                                "PicUrl" =>"http://b8107.cn/public/weixin/image/oil.jpg",
+                                "Url" =>""
+                            );
+                            $result=$this->transNews($obj,$content);
+                        }
+
                         break;
                     case '账号绑定':
                         $OpenID=$obj->FromUserName;
