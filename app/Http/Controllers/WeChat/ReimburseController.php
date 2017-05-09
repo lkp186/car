@@ -19,10 +19,6 @@ class ReimburseController extends Controller
     public function reimburseOpt(Request $request){
         $OpenID=$request->input('OpenID');
         $gas_invoice=$request->file('gas_invoice');//油费发票图片
-        $gauge_before=$request->file('gauge_before');//加油前的油表照片
-        $gauge_after=$request->file('gauge_after');//加油后的油表照片
-        $file=array($gas_invoice,$gauge_before,$gauge_after);
-
         if ($gas_invoice->isValid()) {
             // 上传加油发票图片，获取文件相关信息
             $originalIDName = $gas_invoice->getClientOriginalName(); // 文件原名
@@ -34,6 +30,8 @@ class ReimburseController extends Controller
             // 使用我们新建的uploads本地存储空间（目录）
             $bool = Storage::disk('public')->put($filename_gas_invoice, file_get_contents($realPath));
             if($bool){
+                $gauge_before=$request->file('gauge_before');//加油前的油表照片
+
                 // 上传加油前油表图片，获取文件相关信息
                 $originalIDName = $gauge_before->getClientOriginalName(); // 文件原名
                 $ext = $gauge_before->getClientOriginalExtension();     // 扩展名
@@ -44,6 +42,7 @@ class ReimburseController extends Controller
                 // 使用我们新建的uploads本地存储空间（目录）
                 $bool_gauge_before= Storage::disk('public')->put($filename_gauge_before, file_get_contents($realPath));
                 if($bool_gauge_before){
+                    $gauge_after=$request->file('gauge_after');//加油后的油表照片
                     // 上传加油前油表图片，获取文件相关信息
                     $originalIDName = $gauge_after->getClientOriginalName(); // 文件原名
                     $ext = $gauge_after->getClientOriginalExtension();     // 扩展名$realPath = $gas_invoice->getRealPath();   //临时文件的绝对路径
