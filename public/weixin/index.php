@@ -142,13 +142,21 @@ class wechatCallbackapiTest
                         break;
                     case '账号绑定':
                         $OpenID=$obj->FromUserName;
-                        $content[] = array(
-                            "Title" =>"账号绑定",
-                            "Description" =>"将微信号与ShareCar账号绑定",
-                            "PicUrl" =>"http://b8107.cn/public/weixin/bind.jpg",
-                            "Url" =>"http://b8107.cn/weiChat/binding?OpenID=$OpenID"
-                        );
-                        $result=$this->transNews($obj,$content);
+                        $url="http://b8107.cn/weiChat/checkUsers?OpenID=$OpenID";
+                        $json=$this->http_request($url);//进行用户验证，看用户是否进行了账号绑定
+                        $status=json_decode($json,true);
+                        if($status['status']==0){
+                            $content[] = array(
+                                "Title" =>"账号绑定",
+                                "Description" =>"将微信号与ShareCar账号绑定",
+                                "PicUrl" =>"http://b8107.cn/public/weixin/bind.jpg",
+                                "Url" =>"http://b8107.cn/weiChat/binding?OpenID=$OpenID"
+                            );
+                            $result=$this->transNews($obj,$content);
+                        }else{
+                            $content="您已经完成了账号绑定";
+                            $result=$this->transText($obj,$content);
+                        }
                         break;
                     default:
                         //假如用户没有开启获取地理位置的权限则会执行该操作，删除数据库中用户的地理位置
