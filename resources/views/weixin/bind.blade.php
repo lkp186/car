@@ -51,7 +51,7 @@
                     if(data==0){
                         sweetAlert("用户名或密码不正确!", "", "error");
                     }else {
-                        setTimeout(window.location.href= "{{url('')}}", 1000);
+                        sweetAlert("绑定成功!", "", "success");
                     }
                 }
             });
