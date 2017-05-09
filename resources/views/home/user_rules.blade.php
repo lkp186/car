@@ -9,10 +9,11 @@
         <li id="t3" class="active" role="presentation"><a href="{{url('home/user/rules')}}"><h4 id="h3">用户守则</h4></a></li>
         <li id="t4" role="presentation"><a href="{{url('home/payRecord')}}"><h4 id="h4">消费记录</h4></a></li>
         <li id="t5" role="presentation"><a href="{{url('home/user/comment')}}"><h4 id="h5">使用反馈</h4></a></li>
+        <div style="height: 300px;"></div>
     </ul>
 @endsection
 @section('main')
-    <h1 style="padding-top: 35%;text-align: center;">Share—Car用户守则</h1>
+    <h1 style="text-align: center;">Share—Car用户守则</h1>
     <div style="text-indent:2em;color:snow;font-family:楷体;background-color: snow;opacity: 0.9;">
         <div style="height: 12px;"></div>
         <h3 style="color: black;">一.使用限制</h3>
