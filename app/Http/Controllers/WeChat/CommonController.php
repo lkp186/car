@@ -44,7 +44,7 @@ class CommonController extends Controller
             //将用户的微信与网站账号绑定起来
             User_info::where('user_ID_card',$ID)->update(['OpenID'=>$OpenID]);
             $msg='绑定成功';
-            return view('bind_message',['msg'=>$msg]);
+            return view('weixin.bind_message',['msg'=>$msg]);
         }
     }
 }
