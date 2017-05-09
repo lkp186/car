@@ -4,11 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>油费报销</title>
     <link rel="stylesheet" href="{{asset('public/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('public/css/fileinput.min.css')}}">
+    <script type="text/javascript" src="{{asset('public/weixin/js/fileinput.min.js')}}"></script>
 </head>
 <body>
 <div class="jumbotron" style="text-align: center;"><h2 style="font-family: 微软雅黑">Share-Car邮费报销</h2></div>
 <div class="container">
-    <input type="file">
+    <input type="file" class="file">
 </div>
 <script type="text/javascript" src="{{asset('public/js/jquery.min.js')}}"></script>
 </body>
