@@ -134,7 +134,7 @@ class wechatCallbackapiTest
                                 "Title" =>"油费报销",
                                 "Description" =>"请上传相应的图片",
                                 "PicUrl" =>"http://b8107.cn/public/weixin/image/oil.jpg",
-                                "Url" =>""
+                                "Url" =>"http://b8107.cn/weiChat/reimburse/view?OpenID=$OpenID"
                             );
                             $result=$this->transNews($obj,$content);
                         }
