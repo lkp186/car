@@ -22,25 +22,38 @@ class ReimburseController extends Controller
         $gauge_before=$request->file('gauge_before');//加油前的油表照片
         $gauge_after=$request->file('gauge_after');//加油后的油表照片
         $file=array($gas_invoice,$gauge_before,$gauge_after);
-        // 文件是否上传成功
-        if ($gas_invoice->isValid()&&$gauge_before->isValid()&&$gauge_after->isValid()) {
-            $img=array();
-            for($i=0;$i<=2;$i++){
-                // 获取文件相关信息
-                $originalName = $file[$i]->getClientOriginalName(); // 文件原名
-                $ext = $file[$i]->getClientOriginalExtension();     // 扩展名
-                $realPath = $file[$i]->getRealPath();   //临时文件的绝对路径
-                $type = $file[$i]->getClientMimeType();     // image/jpeg
 
+        if ($gas_invoice->isValid()) {
+            // 上传加油发票图片，获取文件相关信息
+            $originalIDName = $gas_invoice->getClientOriginalName(); // 文件原名
+            $ext = $gas_invoice->getClientOriginalExtension();     // 扩展名
+            $realPath = $gas_invoice->getRealPath();   //临时文件的绝对路径
+            $typeID = $gas_invoice->getClientMimeType();     // image/jpeg
+            // 上传文件
+            $filename_gas_invoice = date('Y-m-d-H-i-s') . '-' . uniqid() . '.' . $ext;
+            // 使用我们新建的uploads本地存储空间（目录）
+            $bool = Storage::disk('public')->put($filename_gas_invoice, file_get_contents($realPath));
+            if($bool){
+                // 上传加油前油表图片，获取文件相关信息
+                $originalIDName = $gauge_before->getClientOriginalName(); // 文件原名
+                $ext = $gauge_before->getClientOriginalExtension();     // 扩展名
+                $realPath = $gauge_before->getRealPath();   //临时文件的绝对路径
+                $typeID = $gauge_before->getClientMimeType();     // image/jpeg
                 // 上传文件
-                $filename = date('Y-m-d-H-i-s') . '-' . uniqid() . '.' . $ext;
+                $filename_gauge_before = date('Y-m-d-H-i-s') . '-' . uniqid() . '.' . $ext;
                 // 使用我们新建的uploads本地存储空间（目录）
-                $bool = Storage::disk('uploads')->put($filename, file_get_contents($realPath));
-                if($bool){
-                    $img[$i]=$filename;
+                $bool_gauge_before= Storage::disk('public')->put($filename_gauge_before, file_get_contents($realPath));
+                if($bool_gauge_before){
+                    // 上传加油前油表图片，获取文件相关信息
+                    $originalIDName = $gauge_after->getClientOriginalName(); // 文件原名
+                    $ext = $gauge_after->getClientOriginalExtension();     // 扩展名$realPath = $gas_invoice->getRealPath();   //临时文件的绝对路径
+                    $typeID = $gauge_after->getClientMimeType();     // image/jpeg
+                    // 上传文件
+                    $filename_gauge_after = date('Y-m-d-H-i-s') . '-' . uniqid() . '.' . $ext;
+                    // 使用我们新建的uploads本地存储空间（目录）
+                    $bool_gas_invoice= Storage::disk('public')->put($filename_gauge_after, file_get_contents($realPath));
                 }
             }
-            dd($img);
         }else{
             return '上传失败';
         }
