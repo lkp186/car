@@ -8,6 +8,7 @@
 <body>
 <div class="jumbotron" style="text-align: center;"><h2 style="font-family: 微软雅黑">Share-Car邮费报销</h2></div>
 <div class="container">
+    <input type="file">
 </div>
 <script type="text/javascript" src="{{asset('public/js/jquery.min.js')}}"></script>
 </body>
