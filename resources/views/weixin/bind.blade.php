@@ -26,7 +26,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">绑定</button>
+                <button type="button" class="btn btn-primary">绑定</button>
             </div>
         </div>
     </form>
