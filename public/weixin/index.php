@@ -129,7 +129,7 @@ class wechatCallbackapiTest
                         $content[] = array(
                             "Title" =>"账号绑定",
                             "Description" =>"将微信号与ShareCar账号绑定",
-                            "PicUrl" =>"http://b8107.cn/public/weixin/ss.jpg",
+                            "PicUrl" =>"http://b8107.cn/public/weixin/bind.jpg",
                             "Url" =>"http://b8107.cn/weiChat/binding"
                         );
                         $result=$this->transNews($obj,$content);
