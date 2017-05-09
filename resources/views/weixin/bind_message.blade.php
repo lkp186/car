@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-
+{{$msg}}
 </div>
 </body>
 </html>
