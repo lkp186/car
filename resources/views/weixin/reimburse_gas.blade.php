@@ -14,7 +14,7 @@
         {{csrf_field()}}
         <div class="form-group">
             <label class="col-sm-2 control-label">小贴士:</label>
-            <label class="col-sm-8 control-label">报销需要加油发票照片以及车辆油表在加油前后的油表照片</label>
+            <label class="col-sm-7 control-label">报销需要加油发票照片以及车辆油表在加油前后的油表照片</label>
         </div>
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">加油发票图片</label>
