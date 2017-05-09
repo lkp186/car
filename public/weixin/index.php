@@ -121,8 +121,8 @@ class wechatCallbackapiTest
                         }
                         $result=$this->transText($obj,$content);
                         break;
-                    case '地图导航':
-                        $content="请通过微信发送当前位置给我们，即可进行导航";
+                    case '油费报销':
+                        $content="请先发送您的身份证号过来,便于我们确认您的身份！";
                         $result=$this->transText($obj,$content);
                         break;
                     default:

@@ -72,8 +72,8 @@ $json_menu='
            },
            {
                "type":"click",
-               "name":"地图导航",
-               "key":"地图导航"
+               "name":"油费报销",
+               "key":"油费报销"
            }
            
            ]
