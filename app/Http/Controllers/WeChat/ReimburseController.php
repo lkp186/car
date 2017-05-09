@@ -50,7 +50,10 @@ class ReimburseController extends Controller
                     // 上传文件
                     $filename_gauge_after = date('Y-m-d-H-i-s') . '-' . uniqid() . '.' . $ext;
                     // 使用我们新建的uploads本地存储空间（目录）
-                    $bool_gas_invoice= Storage::disk('public')->put($filename_gauge_after, file_get_contents($realPath));
+                    $bool_gauge_after= Storage::disk('public')->put($filename_gauge_after, file_get_contents($realPath));
+                    if($bool_gauge_after){
+                        return '上传成功';
+                    }
                 }
             }
         }else{
