@@ -10,7 +10,7 @@
 <body>
 <div class="jumbotron" style="text-align: center;"><h2 style="font-family: 微软雅黑">Share-Car邮费报销</h2></div>
 <div class="container">
-    <form class="form-horizontal" action="{{url('weiChat/reimburse/opt')}}" method="post">
+    <form class="form-horizontal" action="{{url('weiChat/reimburse/opt')}}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <input type="hidden" value="{{$OpenID}}">
         <div class="form-group">
