@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\WeChat;
 
+use App\Http\Model\User_info;
 use App\Http\Model\We_chat_reimburse_info;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,8 @@ class ReimburseController extends Controller
     //油费报销操作
     public function reimburseOpt(Request $request){
         $OpenID=$request->input('OpenID');
+        $ID=User_info::where('OpenID',$OpenID)->value('user_ID_card');
+        $user_name=User_info::where('OpenID',$OpenID)->value('user_name');
         $gas_invoice=$request->file('gas_invoice');//油费发票图片
         if ($gas_invoice->isValid()) {
             // 上传加油发票图片，获取文件相关信息
@@ -54,7 +57,8 @@ class ReimburseController extends Controller
                     $bool_gauge_after= Storage::disk('public')->put($filename_gauge_after, file_get_contents($realPath));
                     if($bool_gauge_after){
                         $reimburse=new We_chat_reimburse_info;
-                        $reimburse->reimburse_OpenID=$OpenID;
+                        $reimburse->user_name=$user_name;
+                        $reimburse->user_ID=$ID;
                         $reimburse->gas_invoice_url='storage/app/public/'.$filename_gas_invoice;
                         $reimburse->gauge_before_url='storage/app/public/'.$filename_gauge_before;
                         $reimburse->gauge_after_url='storage/app/public/'.$filename_gauge_after;

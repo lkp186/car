@@ -145,6 +145,10 @@ Route::group(['middleware' => ['web','admin'],'prefix'=>'admin','namespace'=>'Ad
     //用户评论管理界面
     Route::get('home/comment','AdminUserManageController@comment');//用户评论管理
     Route::get('home/comment/delete','AdminUserManageController@delComment');//用户评论删除操作
+
+    //油费报销
+    Route::get('gas/reimburse/view','ReimburseController@index');//油费报销界面
+
 });
 
 //微信公众号部分的路由

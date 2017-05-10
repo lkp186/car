@@ -64,6 +64,14 @@
             </div>
         </div>
         <div>
+            <div><span >报销管理</span><i class="fa fa-angle-right fa-lg"></i></div>
+            <div name="xz">
+                <div>
+                    <a href="{{asset('admin/gas/reimburse/view')}}" style="text-decoration: none;"><div><span>油费报销</span></div></a>
+                </div>
+            </div>
+        </div>
+        <div>
             <div><span>账号管理</span><i class="fa fa-angle-right fa-lg"></i></div>
             <div name="xz">
                 <div>
