@@ -40,7 +40,7 @@
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gauge_after_url)}}" data-action="zoom" /></td>
                         <td>
                             <button type="submit" class="btn btn-sm btn-warning">同意</button>
-                            <button type="submit" class="btn btn-sm btn-danger">绝交</button>
+                            <button type="submit" class="btn btn-sm btn-danger">拒绝</button>
                         </td>
                     </tr>
                 </form>
