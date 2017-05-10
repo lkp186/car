@@ -19,9 +19,12 @@
             <th>编号</th>
             <th>报销人姓名</th>
             <th>报销人身份证号</th>
+            <th>加油站地址</th>
+            <th>加油工作人员工号</th>
             <th>油费发票</th>
             <th>加油前</th>
             <th>加油后</th>
+            <th>操作</th>
             </thead>
             @foreach($reimburse as $value)
                 <form role="form" method="post" action="{{url('')}}" enctype="multipart/form-data">
@@ -30,10 +33,15 @@
                         <td>{{$i++}}</td>
                         <td>{{$value->user_name}}</td>
                         <td>{{$value->user_ID}}</td>
+                        <td>{{$value->address}}</td>
+                        <td>{{$value->work_number}}</td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gas_invoice_url)}}" data-action="zoom" /></td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gauge_before_url)}}" data-action="zoom" /></td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gauge_after_url)}}" data-action="zoom" /></td>
-                        <td><button type="submit" class="btn btn-sm btn-warning">同意</button></td>
+                        <td>
+                            <button type="submit" class="btn btn-sm btn-warning">同意</button>
+                            <button type="submit" class="btn btn-sm btn-danger">绝交</button>
+                        </td>
                     </tr>
                 </form>
             @endforeach
