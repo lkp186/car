@@ -59,12 +59,16 @@ class ReimburseController extends Controller
                         $reimburse->gauge_before_url='storage/app/public/'.$filename_gauge_before;
                         $reimburse->gauge_after_url='storage/app/public/'.$filename_gauge_after;
                         $reimburse->save();
-                        return '上传成功';
+                        $status=1;
+                        $message='上传成功';
+                        return view('weixin.upload_message',['status'=>$status,'msg'=>$message]);
                     }
                 }
             }
         }else{
-            return '上传失败';
+            $status=0;
+            $message='上传失败';
+            return view('weixin.upload_message',['status'=>$status,'msg'=>$message]);
         }
     }
 }
