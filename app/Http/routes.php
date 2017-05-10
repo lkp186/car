@@ -150,6 +150,9 @@ Route::group(['middleware' => ['web','admin'],'prefix'=>'admin','namespace'=>'Ad
     Route::get('gas/reimburse/view','ReimburseController@index');//油费报销审批界面
     Route::get('gas/reimburse/agree_view','ReimburseController@agreeView');//同意报销界面
     Route::post('gas/reimburse/agree','ReimburseController@agree');//油费同意报销操作
+    Route::get('gas/reimburse/agreed','ReimburseController@agreed');//查询审核通过报销
+    Route::get('gas/reimburse/refuse','ReimburseController@refuse');//查询拒绝报销
+    Route::get('gas/reimburse/refuseOpt','ReimburseController@refuseOpt');//拒绝报销操作
 });
 
 //微信公众号部分的路由

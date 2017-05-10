@@ -15,8 +15,8 @@ class ReimburseController extends Controller
 {
     //油费报销界面
     public function index(){
-        $reimburse=We_chat_reimburse_info::paginate(10);
-        return view('admin.reimburse',['reimburse'=>$reimburse]);
+        $reimburse=We_chat_reimburse_info::where('reimburse_status',0)->paginate(10);
+        return view('admin.reimburse',['reimburse'=>$reimburse,'status'=>'0']);
     }
     //油费同意报销界面
     public function agreeView(Request $request){
@@ -33,6 +33,8 @@ class ReimburseController extends Controller
         $newBalance=$margin_balance+$money;
         //将油费打入用户的保证金账户
         Margin_info::where('margin_ID_card',$ID)->update(['margin_balance'=>$newBalance]);
+        //将用户的报销状态改为已报销
+        We_chat_reimburse_info::where('user_ID',$ID)->update(['reimburse_status'=>'1']);
         //发送邮件通知用户
         $email=$request->input('email');
         $flag = Mail::send('emails.reimbursement',['name'=>$email,'money'=>$money],function($message)use($email){
@@ -45,5 +47,23 @@ class ReimburseController extends Controller
             return 0;
         }
 
+    }
+    //用户已经审核通过界面
+    public function agreed(){
+        $reimburse=We_chat_reimburse_info::where('reimburse_status',1)->paginate(10);
+        return view('admin.reimburse',['reimburse'=>$reimburse,'status'=>'1']);
+    }
+    //用户拒绝报销的界面
+    public function refuse(){
+        $reimburse=We_chat_reimburse_info::where('reimburse_status',2)->paginate(10);
+        return view('admin.reimburse',['reimburse'=>$reimburse,'status'=>'2']);
+    }
+    //拒绝用户报销
+    public function refuseOpt(Request $request){
+        $ID=$request->input('ID');
+        //将用户的状态改成被拒绝
+        We_chat_reimburse_info::where('user_ID',$ID)->update(['reimburse_status'=>'2']);
+        $reimburse=We_chat_reimburse_info::where('reimburse_status',2)->paginate(10);
+        return view('admin.reimburse',['reimburse'=>$reimburse,'status'=>'2']);
     }
 }

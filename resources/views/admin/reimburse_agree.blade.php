@@ -53,6 +53,7 @@
                             success:function (data){
                                if(data==1){
                                    alert('报销成功,已发送电子邮件通知客户');
+                                   setTimeout(window.location.href= "{{url('admin/gas/reimburse/agreed')}}", 1000);
                                }else {
                                    alert('报销失败，未知的错误');
                                }
