@@ -22,6 +22,8 @@ class ReimburseController extends Controller
         $OpenID=$request->input('OpenID');
         $ID=User_info::where('OpenID',$OpenID)->value('user_ID_card');
         $user_name=User_info::where('OpenID',$OpenID)->value('user_name');
+        $address=$request->input('address');
+        $work_number=$request->input('work_number');
         $gas_invoice=$request->file('gas_invoice');//油费发票图片
         if ($gas_invoice->isValid()) {
             // 上传加油发票图片，获取文件相关信息
@@ -62,6 +64,8 @@ class ReimburseController extends Controller
                         $reimburse->gas_invoice_url='storage/app/public/'.$filename_gas_invoice;
                         $reimburse->gauge_before_url='storage/app/public/'.$filename_gauge_before;
                         $reimburse->gauge_after_url='storage/app/public/'.$filename_gauge_after;
+                        $reimburse->address=$address;
+                        $reimburse->work_number=$work_number;
                         $reimburse->save();
                         $status=1;
                         $message='上传成功';

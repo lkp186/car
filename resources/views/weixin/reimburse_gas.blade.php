@@ -18,6 +18,18 @@
             <label class="col-sm-7 control-label">报销需要加油发票照片以及车辆油表在加油前后的油表照片</label>
         </div>
         <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">加油站地址</label>
+            <div class="col-sm-10">
+                <input type="text" name="address" class="form-control"  placeholder="油表(后)">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">加油工作人员工号</label>
+            <div class="col-sm-10">
+                <input type="text" name="work_number" class="form-control" placeholder="油表(后)">
+            </div>
+        </div>
+        <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">加油发票图片</label>
             <div class="col-sm-10">
                 <input type="file" name="gas_invoice" class="file form-control" id="gas_invoice" placeholder="加油发票">

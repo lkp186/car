@@ -33,7 +33,7 @@
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gas_invoice_url)}}" data-action="zoom" /></td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gauge_before_url)}}" data-action="zoom" /></td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gauge_after_url)}}" data-action="zoom" /></td>
-                        <td><button type="submit" class="btn btn-sm btn-warning">更改</button></td>
+                        <td><button type="submit" class="btn btn-sm btn-warning">同意</button></td>
                     </tr>
                 </form>
             @endforeach
