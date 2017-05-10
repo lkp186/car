@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\WeChat;
 
+use App\Http\Model\We_chat_reimburse_info;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -52,6 +53,12 @@ class ReimburseController extends Controller
                     // 使用我们新建的uploads本地存储空间（目录）
                     $bool_gauge_after= Storage::disk('public')->put($filename_gauge_after, file_get_contents($realPath));
                     if($bool_gauge_after){
+                        $reimburse=new We_chat_reimburse_info;
+                        $reimburse->reimburse_OpenID=$OpenID;
+                        $reimburse->gas_invoice_url='storage/app/public/'.$filename_gas_invoice;
+                        $reimburse->gauge_before_url='storage/app/public/'.$filename_gauge_before;
+                        $reimburse->gauge_after_url='storage/app/public/'.$filename_gauge_after;
+                        $reimburse->save();
                         return '上传成功';
                     }
                 }
