@@ -147,8 +147,9 @@ Route::group(['middleware' => ['web','admin'],'prefix'=>'admin','namespace'=>'Ad
     Route::get('home/comment/delete','AdminUserManageController@delComment');//用户评论删除操作
 
     //油费报销
-    Route::get('gas/reimburse/view','ReimburseController@index');//油费报销界面
-
+    Route::get('gas/reimburse/view','ReimburseController@index');//油费报销审批界面
+    Route::get('gas/reimburse/agree_view','ReimburseController@agreeView');//同意报销界面
+    Route::post('gas/reimburse/agree','ReimburseController@agree');//油费同意报销操作
 });
 
 //微信公众号部分的路由
