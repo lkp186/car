@@ -63,6 +63,11 @@ class ReimburseController extends Controller
         $ID=$request->input('ID');
         //将用户的状态改成被拒绝
         We_chat_reimburse_info::where('user_ID',$ID)->update(['reimburse_status'=>'2']);
+        $email=User_info::where('user_ID_card',$ID)->value('user_email');
+        Mail::send('emails.reimbursement_refuse',['name'=>$email],function($message)use($email){
+            $to = $email;
+            $message ->to($to)->subject('报销通知');
+        });
         $reimburse=We_chat_reimburse_info::where('reimburse_status',2)->paginate(10);
         return view('admin.reimburse',['reimburse'=>$reimburse,'status'=>'2']);
     }
