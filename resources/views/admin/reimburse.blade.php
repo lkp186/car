@@ -28,8 +28,8 @@
                     {{csrf_field()}}
                     <tr>
                         <td>{{$i++}}</td>
-                        <td>{{$value->user_name}}}</td>
-                        <td>{{$value->user_ID}}}</td>
+                        <td>{{$value->user_name}}</td>
+                        <td>{{$value->user_ID}}</td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gas_invoice_url)}}" data-action="zoom" /></td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gauge_before_url)}}" data-action="zoom" /></td>
                         <td><img style="width: 60px;height: 30px;" src="{{asset($value->gauge_after_url)}}" data-action="zoom" /></td>
@@ -39,4 +39,7 @@
             @endforeach
         </table>
     </div>
+@endsection
+@section('script')
+    <script type="text/javascript" src="{{asset('public/js/zooming.js')}}"></script>
 @endsection
