@@ -44,7 +44,10 @@ class RegisterController extends Controller
         $email=$request->input('email');
         $code=rand(100,999).rand(100,999);//随机产生验证码
         $request->session()->put('code',$code);//向session中存储验证码
-        $flag = Mail::send('emails.sendmail',['name'=>$email,'code'=>$code],function($message)use($email,$code){
+        $flag = Mail::send(
+            'emails.sendmail',
+            ['name'=>$email,'code'=>$code],
+            function($message)use($email,$code){
             $to = $email;
             $message ->to($to)->subject('注册码');
         });

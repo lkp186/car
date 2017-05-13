@@ -39,7 +39,7 @@
                 <option value="连云区">连云区</option>
             </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label class="label label-warning" style="font-size: 1em;">详细名称:</label>&nbsp;&nbsp;
-            <select id="haizhou" name="road" style="display: none;width: 300px;">
+            <select id="haizhou" name="haizhou_road" style="display: none;width: 300px;">
                  <option>全部</option>
                 @foreach($area as $a)
                     @if($a->area_pid==1)
@@ -47,7 +47,7 @@
                     @endif
                 @endforeach
             </select>
-            <select name="road" id="lianyun" style="display: none;width: 300px;">
+            <select name="lianyun_road" id="lianyun" style="display: none;width: 300px;">
                 <option>全部</option>
                 @foreach($area as $a)
                     @if($a->area_pid==2)
