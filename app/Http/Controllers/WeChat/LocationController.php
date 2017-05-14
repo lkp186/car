@@ -43,7 +43,7 @@ class LocationController extends Controller
             $attr=array('msg'=>$location,'error'=>0);
             $json=json_encode($attr,true);
         }else{
-            $attr=array('msg'=>'傻逼的系统','error'=>1);
+            $attr=array('msg'=>'傻傻的系统','error'=>1);
             $json=json_encode($attr,true);
         }
         return $json;
