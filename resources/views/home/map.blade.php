@@ -57,6 +57,7 @@
         function addMarker(point,content){
             var marker = new BMap.Marker(point);
             map.addOverlay(marker);
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
             addClickHandler(content,marker);
         }
         //点击事件触发信息窗口
