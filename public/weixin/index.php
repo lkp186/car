@@ -318,9 +318,6 @@ $item_str
         $result = sprintf($xmlTpl, $obj->FromUserName, $obj->ToUserName, time());
         return $result;
     }
-
-
-
     //文本消息--回复图文消息
     public function transNews($obj,$newsArray){
         if(!is_array($newsArray)){
