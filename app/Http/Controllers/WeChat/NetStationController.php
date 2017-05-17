@@ -11,6 +11,13 @@ class NetStationController extends Controller
 {
     //网点分布
     public function netStation(){
-        return view('weixin.netStation');
+        $all=Area_info::all();
+        $arr=array();
+        foreach ($all as $value){
+            array_push($arr,urlencode($value->area_name_road));
+        }
+        $json=json_encode($arr,true);
+        $newPoint=urldecode($json);
+        return view('weixin.netStation',['newPoint'=>$newPoint]);
     }
 }
