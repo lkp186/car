@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\WeChat;
 
+use App\Http\Model\Area_info;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
