@@ -83,8 +83,8 @@ class wechatCallbackapiTest
                 switch ($obj->EventKey){
                     case 'music':
                         $content=array("Title"=>'FSN','Description'=>'超燃',
-                            'MusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
-                            'HQMusicUrl'=>'http://b8107.cn/public/weixin/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
+                            'MusicUrl'=>'http://b8107.cn/public/weixin/music/龙登杰 - Purple Passion紫色激情（重录版）.mp3',
+                            'HQMusicUrl'=>'http://b8107.cn/public/weixin/music/龙登杰 - Purple Passion紫色激情（重录版）.mp3');
                         $result=$this->transMusic($obj,$content);
                         break;
                     case '新人指引':
