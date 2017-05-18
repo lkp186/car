@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function index(){
         $result=Image_info::where('image_category',1)->get();
         $image=Image_info::where('image_category',0)->get();
-        $comment=Comment_info::get();
+        $comment=Comment_info::orderBy('comment_time', 'desc')->limit(7)->get();
         return view('home.home',['result'=>$result,'image'=>$image,'comment'=>$comment]);
     }
     //订车须知

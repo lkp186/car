@@ -124,12 +124,12 @@
                                     <img src="{{asset('public/image/service/service1.png')}}" alt="...">
                                 </div>
                                 <div class="thumbnail">
-                                    <img src="{{asset('public/image/service/service2.png')}}" alt="...">
+                                    <img src="{{asset('public/image/service/service2.jpg')}}" alt="...">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <div class="thumbnail">
-                                    <img src="{{asset('public/image/service/service3.png')}}" alt="...">
+                                    <img src="{{asset('public/image/service/service3.jpg')}}" alt="...">
                                 </div>
                                 <div class="thumbnail">
                                     <img src="{{asset('public/image/service/service4.png')}}" alt="...">
@@ -184,10 +184,17 @@
                         <div class="panel-body comment"  >
                             <ul style="text-indent:0.5em;">
                                 @foreach($comment as $value)
-                                    <input type="hidden" value="{{$value->comment_name}}">
-                                    <input type="hidden" value="{{date('Y-m-d H:i:s',$value->comment_time)}}">
-                                    <input type="hidden" value="{{$value->comment_content}}">
-                                    <li class="lkp"style="font-size: 18px;font-family: 微软雅黑">昵称：{{$value->comment_name}}于{{date('Y-m-d H:i:s',$value->comment_time)}}发表了评论</li>
+                                    {{--<input type="hidden" value="{{$value->comment_name}}">--}}
+                                    {{--<input type="hidden" value="{{date('Y-m-d H:i:s',$value->comment_time)}}">--}}
+                                    {{--<input type="hidden" value="{{$value->comment_content}}">--}}
+                                    {{--<li class="lkp"style="font-size: 16px;font-family: 微软雅黑">昵称：{{$value->comment_name}}于{{date('Y-m-d H:i:s',$value->comment_time)}}发表了评论</li>--}}
+
+                                    <div>
+                                        <input type="hidden" value="{{$value->comment_name}}">
+                                        <input type="hidden" value="{{date('Y-m-d H:i:s',$value->comment_time)}}">
+                                        <input type="hidden" value="{{$value->comment_content}}">
+                                        <li class="lkp"style="font-size: 16px;font-family: 微软雅黑">昵称：{{$value->comment_name}}于{{date('Y-m-d H:i:s',$value->comment_time)}}发表了评论</li>
+                                    </div>
                                 @endforeach
                             </ul>
                         </div>
@@ -273,7 +280,12 @@
         <div class="container" >
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <h5><p style="color: snow">支付方式：<img src="{{asset('public/image/wx.jpg')}}"><br></p></h5>
+                    <h5><p style="color: snow">
+                            支付方式：
+                            <img src="{{asset('public/image/wx.png')}}">
+                            <img src="{{asset('public/image/zfb.png')}}">
+                            <img src="{{asset('public/image/yl.png')}}">
+                            <br></p></h5>
                 </div>
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <h5><p style="color: snow">维护人：&nbsp;刘康平<br></p></h5>
