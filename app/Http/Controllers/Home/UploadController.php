@@ -54,6 +54,14 @@ class UploadController extends Controller
                             $result=User_status_info::find($user_id);
                             return view('home.personal_manage_status',['result'=>$result->toArray()]);
                         }else{
+                            User_status_info::
+                            where('user_id',$user_id)
+                                ->update(['id_image'=>$filename_id_card,
+                                    'drive_image'=>$filename_drive,
+                                    'user_name'=>$true_name,
+                                    'user_drive_id'=>$drive_number,
+                                    'user_status'=>0
+                                ]);
                             $result=User_status_info::find($user_id);
                             return view('home.personal_manage_status',['result'=>$result->toArray()]);
                         }

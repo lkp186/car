@@ -78,6 +78,8 @@ class RegisterController extends Controller
         $user->user_ID_card=$input['ID'];
         $user->save();
         $request->session()->put('username',$input['username']);
+        $user_id=User_info::where('user_email',$input['email'])->value('user_id');
+        $request->session()->put('user_id',$user_id);
         $result=Image_info::where('image_category',1)->get();
         $image=Image_info::where('image_category',0)->get();
         $comment=Comment_info::get();

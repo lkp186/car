@@ -21,7 +21,7 @@ class PersonalController extends Controller
         //查询用户是否进行了资格审查
         $user_id=$request->session()->get('user_id');
         $user_status=User_status_info::where('user_id',$user_id)->value('user_status');
-        if(empty($user_status)){
+        if(empty($user_status)||$user_status=='2'){
             $user_status='未';
         }else{
             $user_status='已';
@@ -64,6 +64,10 @@ class PersonalController extends Controller
     //用户守则界面
     public function rules(){
         return view('home.user_rules');
+    }
+    //用户重新认证
+    public function reConfirm(){
+        return view('home.personal_manage');
     }
 
 }

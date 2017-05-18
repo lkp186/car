@@ -89,6 +89,7 @@ Route::group(['middleware' => ['web','home'],'prefix'=>'home','namespace'=>'Home
     Route::post('upload','UploadController@index');//用户上传身份证和驾照
     Route::get('personal/margin','MarginController@index');//缴纳保证金界面
     Route::post('personal/margin/pay','MarginController@payMargin');//缴纳保证金的操作
+    Route::get('personal/reCheck','PersonalController@reConfirm');//用户重新认证
 
     //用户守则
     Route::get('user/rules','PersonalController@rules');

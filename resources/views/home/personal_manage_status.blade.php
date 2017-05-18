@@ -17,20 +17,29 @@
             <th>姓名</th>
             <th>驾驶证编号</th>
             <th>审核进度</th>
+            <th>操作</th>
         </thead>
         <tr>
             <td>{{$result['user_name']}}</td>
             <td>{{$result['user_drive_id']}}</td>
-            <td><label class="label label-info" style="font-size: 1em;">
+
                     @if($result['user_status']==0)
-                       审核中
+                <td>
+                    <label class="label label-info" style="font-size: 1em;">审核中</label>
+                </td>
                     @elseif($result['user_status']==1)
-                       已通过
+                <td>
+                    <label class="label label-success" style="font-size: 1em;">已通过</label>
+                </td>
                     @else
-                        未通过
+                <td>
+                    <label class="label label-danger" style="font-size: 1em;">未通过</label>
+                </td>
+                <td>
+                    <a class="btn btn-warning btn-sm" role="button" href="{{url('home/personal/reCheck')}}" >重新认证</a>
+                </td>
                     @endif
-                </label>
-            </td>
+
         </tr>
 
     </table>
