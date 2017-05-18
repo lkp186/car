@@ -25,11 +25,21 @@ class GetCarController extends Controller
         if(empty($user_ID)){
             return 0;
         }else{
+            $time=Get_car_info::where('getCar_code',$code)->value('order_time');
+            $difftime=time()-$time;
             $getCarTime=Get_car_info::where('getCar_code',$code)->value('getCarTime');
             if(empty($getCarTime)){
                 Get_car_info::where('getCar_code',$code)->update(['getCarTime'=>time()]);
                 return 1;
-            }else{
+            }
+            else if ($difftime>'3600'){
+                $car_number=Get_car_info::where('getCar_code',$code)->value('car_number');
+                Car_info::where('car_number',$car_number)->update(['car_status'=>1]);
+                $getCar_id=Get_car_info::where('car_number',$car_number)->value('getCar_id');
+                Get_car_info::destroy($getCar_id);
+                return 3;
+            }
+            else{
                 return 2;//表示用户已经取过车了
             }
         }

@@ -142,6 +142,8 @@
                             sweetAlert("取车码不正确!", "", "error");
                         }else if(data==2){
                             sweetAlert("您已经成功取车", "", "success");
+                        }else if(data==3){
+                            sweetAlert("您距离取车超过1小时,订单取消", "", "error");
                         }
                         else {
                             sweetAlert("取车成功！请拿走钥匙", "", "success");
