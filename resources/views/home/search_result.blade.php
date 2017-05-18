@@ -5,7 +5,7 @@
 @section('content')
         @if(count($record)!=0)
             <div>
-                <div style="padding-top: 20px;">
+                <div style="padding-top: 90px;">
                     <div style="display: none;">{{date_default_timezone_set('Asia/Shanghai')}}</div>
                     @foreach($record as $value)
                         <div style="background-color: white;">

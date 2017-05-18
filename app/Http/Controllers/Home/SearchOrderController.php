@@ -17,7 +17,7 @@ class SearchOrderController extends Controller
     //订单查找
     public function search(Request $request){
         $ID=$request->input('ID');
-        $record=Order_info::where('order_name_ID',$ID)->get();
+        $record=Order_info::where('order_name_ID',$ID)->orderBy('order_time', 'desc')->get();
         return view('home.search_result',['record'=>$record]);
     }
 }
