@@ -156,7 +156,7 @@
                             sweetAlert("用户名或密码不正确!", "", "error");
                         }else {
                             sweetAlert("登录成功！", "", "success");
-                            window.location.href=('{{asset('admin/home')}}');
+                            setTimeout(window.location.href= "{{url('admin/home')}}", 2000);
                         }
                     }
                 });

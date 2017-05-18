@@ -52,7 +52,7 @@ $json_menu='
            },
            {
                "type":"click",
-               "name":"专属bgm",
+               "name":"语音帮助",
                "key":"music"
            }
            ]
