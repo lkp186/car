@@ -46,7 +46,8 @@
                 </script>
             </h3>
             <div id="road">
-                <h3>网点分布：&nbsp;&nbsp;<a href="{{url('order')}}" style="text-decoration: none;"><span id="11" class="{{@$class}}">全部</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <h3>网点分布：&nbsp;&nbsp;
+                    {{--<a href="{{url('order')}}" style="text-decoration: none;"><span id="11" class="{{@$class}}">全部</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}
                     <input type="hidden" value="{{$i=1}}">
                     @foreach($areaNameRoad as $value)
                         <a href="{{url('home/order/areaRoadAllCar?area_name_road='.$value->area_name_road)}}" style="text-decoration: none;">
